@@ -1,0 +1,94 @@
+.container {
+    height: 100vh;
+    width: 100%;
+
+    .text-container {
+        width: 500px;
+        height: 300px;
+        position: absolute;
+        margin-top: -150px;
+        margin-left: -250px;
+        left: 35%;
+        top: 50%;
+        z-index: 1;
+        // border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+
+        .text {
+            p {
+                font-size: 2.5em;
+                line-height: 0.3em;
+                font-weight: 500;
+            }
+            .name {
+                font-size: 3.5em;
+                font-weight: 600;
+                color: #00b8f0;
+            }
+        }
+
+        .button {
+            margin-top: 20px;
+            width: 200px;
+            height: 100px;
+            backdrop-filter: blur(20px);
+            border: 2px solid black;
+            border-radius: 10px;
+            transition: 0.5s ease-in-out;
+            p {
+                text-align: center;
+                font-size: 1.2em;
+            }
+
+        }
+
+        .button:hover {
+            background-color: rgba(255, 255, 255, 0.37);
+            border-color: transparent;
+            font-weight: 600;
+        }
+    }
+
+    .purple {
+        position: absolute;
+        z-index: -1;
+        top: 60vh;
+        left: 0px;
+        filter: blur(120px);
+        width: 50%;
+    }
+    .blue {
+        position: absolute;
+        z-index: -1;
+        top: -150px;
+        right: -10px;
+        filter: blur(120px);
+        width: 45%;
+    }
+    .red {
+        position: absolute;
+        z-index: -1;
+        top: 55vh;
+        right: -50px;
+        filter: blur(100px);
+        width: 40%;
+    }
+    .orange {
+        position: absolute;
+        z-index: -2;
+        top: -200px;
+        left: -50px;
+        filter: blur(120px);
+        width: 40%;
+    }
+    .grey {
+        position: absolute;
+        z-index: -3;
+        top: 25%;
+        left: 35%;
+        filter: blur(120px);
+    }
+}
