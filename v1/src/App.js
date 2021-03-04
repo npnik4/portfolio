@@ -1,28 +1,28 @@
-import './App.scss';
-import Navbar from './components/NavBar/NavBar';
-import Hero from './views/Hero/Hero';
-import About from './views/About/About';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import "./App.scss";
+import Navbar from "./components/NavBar/NavBar";
+import Hero from "./views/Hero/Hero";
+import About from "./views/About/About";
+import Skills from "./views/Skills/Skills";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 function App() {
-
   const theme = createMuiTheme({
     palette: {
       primary: {
         // light: will be calculated from palette.primary.main,
-        main: '#000',
+        main: "#000",
         // dark: will be calculated from palette.primary.main,
         // contrastText: will be calculated to contrast with palette.primary.main
-        contrastText: '#fff',
+        contrastText: "#fff",
       },
       secondary: {
-        light: '#8e32f8',
-        main: '#fff',
+        light: "#8e32f8",
+        main: "#fff",
         // dark: will be calculated from palette.secondary.main,
-        contrastText: '#6495ed',
+        contrastText: "#6495ed",
       },
       success: {
-        main: '#000'
+        main: "#000",
       },
       // Used by `getContrastText()` to maximize the contrast between
       // the background and the text.
@@ -36,9 +36,10 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Navbar/>
-      <Hero/>
-      <About/>
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
     </ThemeProvider>
   );
 }

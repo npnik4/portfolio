@@ -6,24 +6,24 @@
 
   .text-container {
     width: 30%;
-    height: 40%;
+    height: 350px;
     position: absolute;
     margin-top: -10%;
     margin-left: -15%;
     left: 35%;
     top: 50%;
     z-index: 1;
-    // border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
+    overflow-x: hidden;
 
     .text {
       p {
         font-size: 2.5em;
-        line-height: 0.3em;
         font-weight: 500;
+        margin: 0.2em 0;
       }
       .name {
         font-size: 4em;
@@ -58,6 +58,7 @@
     filter: blur(100px);
     width: 45%;
     animation: side-anim 10s alternate-reverse infinite linear;
+    overflow: hidden;
   }
   .blue {
     position: absolute;
@@ -67,6 +68,7 @@
     filter: blur(100px);
     width: 45%;
     animation: side-anim 10s alternate-reverse infinite linear;
+    overflow: hidden;
   }
   .red {
     position: absolute;
@@ -76,6 +78,7 @@
     filter: blur(90px);
     width: 40%;
     animation: rotate-anim 10s alternate-reverse infinite linear;
+    overflow: hidden;
   }
   .orange {
     position: absolute;
@@ -85,6 +88,7 @@
     filter: blur(120px);
     width: 40%;
     animation: rotate-anim 10s alternate-reverse infinite linear;
+    overflow: hidden;
   }
   .grey {
     position: absolute;
@@ -93,6 +97,7 @@
     left: 35%;
     filter: blur(120px);
     width: 40%;
+    overflow: hidden;
   }
 
   @keyframes rotate-anim {
@@ -127,7 +132,6 @@
       .text {
         p {
           font-size: 1.8em;
-          line-height: 0.3em;
           font-weight: 500;
         }
         .name {
@@ -136,6 +140,56 @@
           color: #00b8f0;
         }
       }
+    }
+
+    .purple {
+      position: absolute;
+      z-index: -1;
+      top: 60vh;
+      left: -10%;
+      filter: blur(90px);
+      width: 60%;
+      animation: none;
+      overflow: hidden;
+    }
+    .blue {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 35%;
+      filter: blur(90px);
+      width: 60%;
+      animation: none;
+      overflow: hidden;
+    }
+    .red {
+      position: absolute;
+      z-index: -1;
+      top: 60vh;
+      left: 30%;
+      filter: blur(90px);
+      width: 60%;
+      animation: none;
+      overflow: hidden;
+    }
+    .orange {
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      left: 0;
+      filter: blur(90px);
+      width: 60%;
+      animation: none;
+      overflow: hidden;
+    }
+    .grey {
+      position: absolute;
+      z-index: -3;
+      top: 25%;
+      left: 20%;
+      filter: blur(90px);
+      width: 60%;
+      overflow: hidden;
     }
   }
 }
