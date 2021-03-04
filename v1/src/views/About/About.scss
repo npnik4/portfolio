@@ -1,0 +1,121 @@
+$accent-color: #8e32f8;
+$text-color: rgb(39, 39, 39);
+
+.about {
+  margin-top: 10em;
+  display: flex;
+  padding: 3em;
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5px;
+    padding: 25px;
+    box-shadow: 5px 11px 120px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(
+      109.26deg,
+      rgba(255, 255, 255, 0.342) 0%,
+      rgba(255, 255, 255, 0.048) 100.54%
+    );
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    transition: 1s ease-in-out;
+    min-height: 500px;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: flex-start;
+
+    p {
+      font-size: 1em;
+      color: $text-color;
+      text-align: left;
+      width: 100%;
+      margin: 0.5em;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      text-decoration-skip-ink: auto;
+      position: relative;
+      cursor: pointer;
+      color: $accent-color;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(140px, 200px));
+      padding: 0px;
+      overflow: hidden;
+      list-style: none;
+
+      li {
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        font-size: 1em;
+        color: $text-color;
+        line-height: 1.2em;
+      }
+
+      li::before {
+        content: "•";
+        position: absolute;
+        left: 0px;
+        color: $accent-color;
+        font-size: 1.2em;
+        line-height: 1.2em;
+      }
+    }
+  }
+
+  .about-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 50%;
+  }
+
+  @media screen and (max-width: 960px) {
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      min-height: 800px;
+    }
+
+    .about-text {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      p {
+        margin: 0.2em;
+      }
+
+      .skills {
+        li {
+          font-size: 0.8em;
+          color: $text-color;
+          line-height: 1em;
+        }
+
+        li::before {
+          font-size: 1em;
+          line-height: 1em;
+        }
+      }
+    }
+
+    .about-image {
+      width: 100%;
+    }
+  }
+}

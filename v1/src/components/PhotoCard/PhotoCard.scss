@@ -1,0 +1,18 @@
+.photoCard {
+    width: 30ch;
+    height: 30ch;
+    // background: grey;
+    border-radius: 10px;
+    background-image: url('../../assets/me.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.5s;
+    will-change: transform;
+    border: 15px solid #984bff80;;
+  }
+  
+  .photoCard:hover {
+    box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+  }
