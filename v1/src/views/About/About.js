@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-no-target-blank */
-import { Container } from "@material-ui/core";
 import React from "react";
+import { Container } from "@material-ui/core";
+import PhotoCard from "../../components/PhotoCard/PhotoCard";
 import "./About.scss";
-import PhotoCard from '../../components/PhotoCard/PhotoCard';
 
 function About() {
   return (
@@ -39,7 +39,7 @@ function About() {
           </ul>
         </div>
         <div className="about-image">
-            <PhotoCard/>
+          <PhotoCard />
         </div>
       </div>
     </Container>

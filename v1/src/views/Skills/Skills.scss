@@ -2,18 +2,28 @@
   margin-top: 10em;
   display: flex;
   flex-direction: column;
-  // border: 1px solid black;
   padding: 3em;
 
   .row {
     display: flex;
     flex-direction: row;
-    padding: 1em 3em;
+    padding: 1.2em 3em;
     justify-content: space-around;
     align-items: center;
 
     i {
       font-size: 5em;
+      color: black;
+    }
+
+    .img {
+      height: 5em;
+        width: 5em;
+    }
+
+    .heading{
+        font-size: 2em;
+        padding: 1em 0;
     }
   }
 
@@ -22,6 +32,11 @@
       i {
         font-size: 4em;
       }
+    }
+
+    .img {
+      height: 4em;
+        width: 4em;
     }
   }
 
@@ -32,6 +47,17 @@
       i {
         font-size: 3em;
       }
+
+      .img {
+        height: 3em;
+        width: 3em;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .skillContainer {
+    margin-top: 3em;
   }
 }
