@@ -52,9 +52,9 @@ function Navbar() {
               Work
             </a>
           </li>
-          <li>
+          <li className="menu-button">
             <a href="/" className="nav-links-mobile" onClick={() => resume()}>
-              Contact
+              Resume
             </a>
           </li>
         </ul>

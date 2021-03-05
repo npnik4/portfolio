@@ -3,6 +3,7 @@ import Navbar from "./components/NavBar/NavBar";
 import Hero from "./views/Hero/Hero";
 import About from "./views/About/About";
 import Skills from "./views/Skills/Skills";
+import Projects from './views/Projects/Projects';
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 function App() {
@@ -16,10 +17,10 @@ function App() {
         contrastText: "#fff",
       },
       secondary: {
-        light: "#8e32f8",
+        light: "#fff",
         main: "#fff",
         // dark: will be calculated from palette.secondary.main,
-        contrastText: "#6495ed",
+        contrastText: "#000",
       },
       success: {
         main: "#000",
@@ -40,6 +41,7 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <Projects />
     </ThemeProvider>
   );
 }
