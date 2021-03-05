@@ -1,7 +1,6 @@
 $height: 100px;
 
 .navbar {
-  top: 0px;
   width: 100%;
   backdrop-filter: blur(20px);
   filter: none !important;
@@ -12,7 +11,7 @@ $height: 100px;
   font-size: 1.2rem;
   position: fixed;
   z-index: 999;
-  //   border: 1px solid black;
+  transition: top 0.1s;
 }
 
 .navbar-container {

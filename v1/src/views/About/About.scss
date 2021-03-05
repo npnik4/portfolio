@@ -2,7 +2,8 @@ $accent-color: #8e32f8;
 $text-color: rgb(39, 39, 39);
 
 .about {
-  margin-top: 10em;
+  margin-top: 5em;
+  padding-top: 5em;
   display: flex;
   padding: 3em;
 
@@ -12,12 +13,12 @@ $text-color: rgb(39, 39, 39);
     justify-content: space-around;
     margin: 5px;
     padding: 25px;
-    box-shadow: 5px 11px 40px rgba(0, 0, 0, 0.2);
-    // background: linear-gradient(
-    //   109.26deg,
-    //   rgba(255, 255, 255, 0.342) 0%,
-    //   rgba(255, 255, 255, 0.048) 100.54%
-    // );
+    box-shadow: 5px 11px 50px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(
+      109.26deg,
+      rgba(255, 255, 255, 0.342) 0%,
+      rgba(255, 255, 255, 0.048) 100.54%
+    );
     // backdrop-filter: blur(10px);
     border-radius: 30px;
     // transition: 1s ease-in-out;

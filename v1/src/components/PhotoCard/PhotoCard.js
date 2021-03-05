@@ -1,5 +1,6 @@
 import React from 'react';
 import './PhotoCard.scss';
+import me from '../../assets/me.png';
 import { useSpring, animated } from 'react-spring';
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
@@ -12,8 +13,9 @@ function PhotoCard() {
       class="photoCard"
       onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
       onMouseLeave={() => set({ xys: [0, 0, 1] })}
-      style={{ transform: props.xys.interpolate(trans) }}
-    />
+      style={{ transform: props.xys.interpolate(trans), backgroundImage: `url(${me})` }}
+    >
+    </animated.div>
   )
 }
 
