@@ -2,8 +2,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
 import "./NavBar.scss";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo2.svg";
 import { Button } from "@material-ui/core";
+import res from '../../assets/docs/Nikhil_Patel_Resume.docx';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -36,7 +37,9 @@ function Navbar() {
   }, [prevScrollpos, isVisible, handleScroll]);
 
 
-  const resume = () => {};
+  const resume = () => {
+    window.location.href = res;
+  };
 
   return (
     <nav className="navbar" id="navbar" style={{top: isVisible ? '0' : '-100px'}}>
@@ -61,6 +64,11 @@ function Navbar() {
           <li className="nav-item">
             <a href="#work" className="nav-links" onClick={closeMobileMenu}>
               Work
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="mailto:npnik4@gmail.com" className="nav-links" onClick={closeMobileMenu}>
+              Contact
             </a>
           </li>
           <li className="menu-button">

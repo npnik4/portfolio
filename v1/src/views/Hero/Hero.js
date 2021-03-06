@@ -10,24 +10,26 @@ import { Button } from "@material-ui/core";
 
 function Hero() {
   const contact = () => {
-    window.location = "mailto:npnik4@gmail.com";
+    window.location.href = "#work";
   };
 
   return (
     <div className="container">
       <div className="text-container">
         <div className="text">
-          <p>Hi, I'm</p>
-          <p className="name">Nikhil Patel.</p>
-          <p>I build things for the web.</p>
+          <p>Hi,</p>
+          <h1 className="name">I'm <span className="color">Nikhil</span>.</h1>
+          <p className="additional">I build things for the web.</p>
+        </div>
+        <div className="button">
           <Button
             variant="outlined"
             size="large"
-            className="button"
             onClick={() => contact()}
           >
-            Get In Touch
+            See my work
           </Button>
+          <div className="scroll"></div>
         </div>
       </div>
       <img src={purple} alt="shape" className="purple " />

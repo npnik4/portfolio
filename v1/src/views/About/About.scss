@@ -1,10 +1,11 @@
-$accent-color: #8e32f8;
+$accent-color: #4F05FF;
 $text-color: rgb(39, 39, 39);
 
 .about {
   margin-top: 5em;
   padding-top: 5em;
-  display: flex;
+  display: flex !important;
+  justify-content: center;
   padding: 3em;
 
   .card {
@@ -28,7 +29,7 @@ $text-color: rgb(39, 39, 39);
   .about-text {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 46%;
     justify-content: center;
     align-items: flex-start;
 
@@ -52,7 +53,7 @@ $text-color: rgb(39, 39, 39);
     .skills {
       display: grid;
       grid-template-columns: repeat(2, minmax(140px, 200px));
-      padding: 0px;
+      padding: 7px;
       overflow: hidden;
       list-style: none;
 
@@ -81,7 +82,7 @@ $text-color: rgb(39, 39, 39);
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    width: 55%;
+    width: 53%;
 
     .loading {
       position: relative;
@@ -114,6 +115,7 @@ $text-color: rgb(39, 39, 39);
       flex-direction: column;
       justify-content: space-around;
       min-height: 800px;
+      width: 80%;
     }
 
     .about-text {
@@ -149,5 +151,9 @@ $text-color: rgb(39, 39, 39);
 @media screen and (max-width: 660px) {
   .about {
     margin-top: 3em;
+
+    .card {
+      width: 100%;
+    }
   }
 }
