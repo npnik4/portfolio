@@ -94,7 +94,7 @@
     z-index: -1;
     top: 55vh;
     left: -50px;
-    filter: blur(100px);
+    filter: blur(120px);
     width: 45%;
     animation: side-anim 10s alternate-reverse infinite linear;
     overflow: hidden;
@@ -104,7 +104,7 @@
     z-index: -1;
     top: -150px;
     right: -10px;
-    filter: blur(100px);
+    filter: blur(120px);
     width: 45%;
     animation: side-anim 10s alternate-reverse infinite linear;
     overflow: hidden;
@@ -114,7 +114,7 @@
     z-index: -1;
     top: 55vh;
     right: 0px;
-    filter: blur(90px);
+    filter: blur(150px);
     width: 40%;
     animation: rotate-anim 10s alternate-reverse infinite linear;
     overflow: hidden;
@@ -124,7 +124,7 @@
     z-index: -2;
     top: -220px;
     left: -100px;
-    filter: blur(120px);
+    filter: blur(150px);
     width: 40%;
     animation: rotate-anim 10s alternate-reverse infinite linear;
     overflow: hidden;
@@ -206,6 +206,12 @@
       filter: blur(100px);
       width: 60%;
       overflow: hidden;
+    }
+    .image {
+      display: none;
+    }
+    .text-container {
+      width: 100%;
     }
   }
 

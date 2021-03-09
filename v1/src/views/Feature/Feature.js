@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
 import homeScreen from '../../assets/urRecalls/home_screen.png';
-import ScanAvertGif from '../../assets/scanavert/X.png';
+import ScanAvertGif from '../../assets/scanavert/X_frame.png';
 import './Feature.scss';
 
 function Feature() {
