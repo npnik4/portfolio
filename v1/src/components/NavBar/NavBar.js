@@ -81,7 +81,7 @@ function Navbar() {
           <Button
             className="nav-button"
             size="small"
-            color="primary"
+            color="secondary"
             variant="outlined"
             onClick={() => resume()}
           >
