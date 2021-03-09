@@ -4,6 +4,7 @@ import Hero from "./views/Hero/Hero";
 import About from "./views/About/About";
 import Skills from "./views/Skills/Skills";
 import Projects from './views/Projects/Projects';
+import Feature from './views/Feature/Feature';
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Navbar />
       <Hero />
+      <Feature/>
       <About />
       <Skills />
       <Projects />

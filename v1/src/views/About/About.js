@@ -11,7 +11,7 @@ function About() {
       <Bounce bottom>
         <div className="card">
           <div className="about-text">
-            <p>Here is a little about me.</p>
+            <p>Here is a little <span>about me</span>.</p>
             <p>I'm Nikhil, a software developer based in NJ.</p>
             <p>
               My mission is to create life enhancing tools that actually make a

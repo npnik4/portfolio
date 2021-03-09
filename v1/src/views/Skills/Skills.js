@@ -19,69 +19,69 @@ function Skills() {
       </div>
       <Flip bottom >
         <div className="row">
-          <div className="cell">
-            <i class="devicon-javascript-plain"></i>
+          <div className="skillCell">
+            <i className="devicon-javascript-plain"></i>
           </div>
-          <div className="cell">
-            <i class="devicon-typescript-plain"></i>
+          <div className="skillCell">
+            <i className="devicon-typescript-plain"></i>
           </div>
-          <div className="cell">
-            <i class="devicon-java-plain-wordmark"></i>
+          <div className="skillCell">
+            <i className="devicon-java-plain-wordmark"></i>
           </div>
-          <div className="cell">
-            <i class="devicon-python-plain-wordmark"></i>
+          <div className="skillCell">
+            <i className="devicon-python-plain-wordmark"></i>
           </div>
-          <div className="cell">
-            <i class="devicon-html5-plain-wordmark"></i>
+          <div className="skillCell">
+            <i className="devicon-html5-plain-wordmark"></i>
           </div>
-          <div className="cell">
-            <i class="devicon-css3-plain-wordmark"></i>
+          <div className="skillCell">
+            <i className="devicon-css3-plain-wordmark"></i>
           </div>
         </div>
       </Flip>
       <Flip bottom delay={300}>
         <div className="row">
-          <div className="cell">
-            <i class="devicon-sass-original"></i>
+          <div className="skillCell">
+            <i className="devicon-sass-original"></i>
           </div>
-          <div className="cell">
-            <i class="devicon-react-original-wordmark"></i>
+          <div className="skillCell">
+            <i className="devicon-react-original-wordmark"></i>
           </div>
-          {/* <i class="devicon-redux-original"></i> */}
-          <div className="cell">
+          {/* <i className="devicon-redux-original"></i> */}
+          <div className="skillCell">
             <img src={redux} alt="redux" className="img" />
           </div>
-          <div className="cell">
-            <i class="devicon-django-plain"></i>
+          <div className="skillCell">
+            <i className="devicon-django-plain"></i>
           </div>
-          <div className="cell">
-            <i class="devicon-nodejs-plain-wordmark"></i>
+          <div className="skillCell">
+            <i className="devicon-nodejs-plain-wordmark"></i>
           </div>
-          <div className="cell">
-            <i class="devicon-github-original-wordmark"></i>
+          <div className="skillCell">
+            <i className="devicon-github-original-wordmark"></i>
           </div>
         </div>
       </Flip>
       <Flip bottom delay={600}>
         <div className="row">
-          <div className="cell">
-            <i class="devicon-bitbucket-original-wordmark"></i>
+          <div className="skillCell">
+            <i className="devicon-bitbucket-original-wordmark"></i>
           </div>
-          {/* <i class="devicon-jenkins-line"></i> */}
-          <div className="cell">
+          {/* <i className="devicon-jenkins-line"></i> */}
+          <div className="skillCell">
             <img src={jenkins} alt="jenkins" className="img" />
           </div>
-          <div className="cell">
-            <i class="devicon-confluence-original-wordmark"></i>
+          <div className="skillCell">
+            <i className="devicon-confluence-original-wordmark"></i>
           </div>
-          <div className="cell">
-            <i class="devicon-amazonwebservices-plain-wordmark"></i>
+          <div className="skillCell">
+            <i className="devicon-amazonwebservices-plain-wordmark"></i>
           </div>
-          <div className="cell">
-            <i class="devicon-firebase-plain-wordmark"></i>
+          <div className="skillCell">
+            <i className="devicon-firebase-plain-wordmark"></i>
           </div>
-          {/* <i class="devicon-sketch-line-wordmark"></i> */}
-          <div className="cell">
+          {/* <i className="devicon-sketch-line-wordmark"></i> */}
+          <div className="skillCell">
             <img src={figma} alt="figma" className="img" />
           </div>
         </div>
