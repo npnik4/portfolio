@@ -5,6 +5,7 @@ import About from "./views/About/About";
 import Skills from "./views/Skills/Skills";
 import Projects from './views/Projects/Projects';
 import Feature from './views/Feature/Feature';
+import Footer from "./views/Footer/Footer";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 function App() {
@@ -19,9 +20,9 @@ function App() {
       },
       secondary: {
         light: "#fff",
-        main: "#fff",
+        main: "#4F05FF",
         // dark: will be calculated from palette.secondary.main,
-        contrastText: "#000",
+        contrastText: "#fff",
       },
       success: {
         main: "#000",
@@ -44,6 +45,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Footer />
     </ThemeProvider>
   );
 }
