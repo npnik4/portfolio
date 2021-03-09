@@ -8,6 +8,7 @@ function Projects() {
   const [active, setActive] = useState([false, false]);
 
   const toggle = (index) => {
+    setActive(Object.assign([], [false, false]));
     const newActive = Object.assign([], active);
     newActive[index] = !newActive[index];
     setActive(newActive);

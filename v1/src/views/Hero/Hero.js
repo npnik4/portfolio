@@ -12,6 +12,9 @@ function Hero() {
   const contact = () => {
     window.location.href = "#work";
   };
+  const scroll = () => {
+    window.location.href = "#feature";
+  };
 
   return (
     <div className="container">
@@ -29,7 +32,7 @@ function Hero() {
           >
             See my work
           </Button>
-          <div className="scroll"></div>
+          <div className="scroll" onClick={() => scroll()}></div>
         </div>
       </div>
       <img src={purple} alt="shape" className="purple " />
