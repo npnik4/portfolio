@@ -16,7 +16,7 @@ function Projects() {
 
   return (
     <Container maxWidth="lg" className="projects" id="work">
-      <h1 className="title">My Work</h1>
+      <h1 className="title">My <span>Work</span>.</h1>
       <div className="work-grid">
         <div className="work1">
           <Card

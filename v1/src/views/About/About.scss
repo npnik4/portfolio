@@ -5,8 +5,18 @@ $text-color: rgb(39, 39, 39);
   margin-top: 5em;
   padding-top: 5em;
   display: flex !important;
+  flex-direction: column;
   justify-content: center;
   padding: 3em;
+
+  .heading {
+    text-align: center;
+    padding: 2em;
+
+    span {
+      color: #4F05FF;
+    }
+  }
 
   .card {
     display: flex;
@@ -155,6 +165,10 @@ $text-color: rgb(39, 39, 39);
 @media screen and (max-width: 660px) {
   .about {
     margin-top: 3em;
+
+    .heading {
+      padding: 1em;
+    }
 
     .card {
       width: 100%;

@@ -3,15 +3,15 @@ import React from "react";
 import { Container } from "@material-ui/core";
 import PhotoCard from "../../components/PhotoCard/PhotoCard";
 import "./About.scss";
-import Bounce from 'react-reveal/Bounce';
+import Flip from 'react-reveal/Flip';
 
 function About() {
   return (
     <Container maxWidth="lg" className="about" id="about">
-      <Bounce bottom>
+      <h1 className="heading"><span>About</span> me.</h1>
+      <Flip bottom>
         <div className="card">
           <div className="about-text">
-            <p>Here is a little <span>about me</span>.</p>
             <p>I'm Nikhil, a software developer based in NJ.</p>
             <p>
               My mission is to create life enhancing tools that actually make a
@@ -44,7 +44,7 @@ function About() {
             <PhotoCard />
           </div>
         </div>
-      </Bounce>
+      </Flip>
     </Container>
   );
 }
