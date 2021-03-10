@@ -7,7 +7,7 @@ $text-color: rgb(39, 39, 39);
   display: flex !important;
   flex-direction: column;
   justify-content: center;
-  padding: 3em;
+  // padding: 3em;
 
   .heading {
     text-align: center;
@@ -171,7 +171,8 @@ $text-color: rgb(39, 39, 39);
     }
 
     .card {
-      width: 100%;
+      width: 90%;
+      padding: 15px;
     }
   }
 }

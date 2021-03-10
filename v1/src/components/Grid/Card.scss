@@ -1,153 +1,186 @@
 .cell {
-    position: relative;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    color: #777777;
-    text-transform: uppercase;
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #777777;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 60px -15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s, 0.3s ease-in-out;
+  font-size: 10px;
+  line-height: 10px;
+  border-radius: 15px;
+  min-height: 200px;
+}
+
+.expandedCell {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 80vh;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  box-shadow: 0px 10px 55px 45px rgba(0, 0, 0, 0.12); //0px 10px 30px -5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.5s;
+  border-radius: 15px;
+  background-color: transparent;
+}
+
+.default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 2em;
+}
+
+.cell:hover {
+  box-shadow: 0px 20px 60px -10px rgba(0, 0, 0, 0.3);
+}
+
+.shuffle {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  padding: 0px 20px 0px 20px;
+  width: auto;
+  height: auto;
+  background: white;
+  border: solid 2px #ffaad4;
+  border-radius: 7px;
+  color: #ffaad4;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 45px;
+}
+
+.shuffle:hover {
+  background: #f9f9f9;
+}
+
+.details {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-align: left !important;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  background: #ffffff6e;
+  color: white;
+  padding: 20px;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 15px;
+
+  .button {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 10px 60px -15px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.5s, 0.3s ease-in-out;
-    font-size: 10px;
-    line-height: 10px;
-    border-radius: 15px;
-    min-height: 200px;
+    width: 150px;
+    text-transform: none;
+    padding: 0;
+    font-weight: bold;
+    color: #994bff;
   }
 
-  .expandedCell {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 90vh;
-    z-index: 3;
+  .info-container {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    background-size: cover;
-    box-shadow: 0px 10px 55px 45px rgba(0, 0, 0, 0.12); //0px 10px 30px -5px rgba(0, 0, 0, 0.2);
-    transition: box-shadow 0.5s;
-    border-radius: 15px;
-    background-color: transparent;
-  }
-  
-  .default {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    font-size: 2em;
-  }
-  
-  .cell:hover {
-    box-shadow: 0px 20px 60px -10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .shuffle {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    padding: 0px 20px 0px 20px;
-    width: auto;
-    height: auto;
-    background: white;
-    border: solid 2px #ffaad4;
-    border-radius: 7px;
-    color: #ffaad4;
-    z-index: 100000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 45px;
-  }
-  
-  .shuffle:hover {
-    background: #f9f9f9;
-  }
-  
-  .details {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    // width: 100%;
-    // height: 100%;
-    text-align: left !important;
-    width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    background: #ffffff6e;
-    color: white;
-    padding: 20px;
-    font-weight: 100;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border-radius: 15px;
-  }
-  
-  .details h1 {
-    color: #994bff;
-    font-size: 2em;
-    font-weight: 600;
-    margin: 0;
-    padding: 0;
-    max-width: 40%;
-  }
-  
-  .details p {
-    color: #777777;
-    font-size: 1.2em;
-    line-height: 1.5em;
-    margin: 0;
-    padding-top: 6px;
-    text-transform: none;
+    height: 70%;
     width: 95%;
+    margin-top: 40px;
+    padding: 1em;
   }
-  
-  .circle {
-    position: absolute;
-    top: calc(50% - 50px);
-    left: calc(50% - 50px);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    box-shadow: 0px 20px 60px -10px rgba(0, 0, 0, 0.2);
+}
+
+.details h1 {
+  color: #994bff;
+  font-size: 2em;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  max-width: 40%;
+}
+
+.details p {
+  color: #777777;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin: 0;
+  padding-top: 6px;
+  text-transform: none;
+  width: 95%;
+}
+
+.circle {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0px 20px 60px -10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  color: #777777 !important;
+  z-index: 50;
+}
+
+.main {
+  // font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+  //   helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 30px 70px 30px 70px;
+  height: auto;
+  display: flex;
+}
+
+.grid {
+  flex: 1;
+}
+
+.ant-btn-primary {
+  background-color: #ca6a9a !important;
+  border-color: #ca6a9a !important;
+}
+
+@media screen and (max-width: 700px) {
+  .details {
+    .info-container {
+      display: flex;
+      flex-direction: column;
+      
+      img {
+        max-width: 90% !important;
+      }
+
+    }
   }
-  
-  .close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
-    color: #777777 !important;
-  }
-  
-  .main {
-    // font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
-    //   helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .header {
-    padding: 30px 70px 30px 70px;
-    height: auto;
-    display: flex;
-  }
-  
-  .grid {
-    flex: 1;
-  }
-  
-  .ant-btn-primary {
-    background-color: #ca6a9a !important;
-    border-color: #ca6a9a !important;
-  }
+}
