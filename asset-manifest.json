@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.1d2241af.chunk.css",
-    "main.js": "/portfolio/static/js/main.1371e7ac.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.1371e7ac.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.7d8ac537.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.7d8ac537.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.772c50c0.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.772c50c0.js.map",
     "static/js/2.0ae26177.chunk.js": "/portfolio/static/js/2.0ae26177.chunk.js",
@@ -15,7 +15,7 @@
     "static/media/Blue.97c0f2fc.svg": "/portfolio/static/media/Blue.97c0f2fc.svg",
     "static/media/DarkOrange.f059159e.svg": "/portfolio/static/media/DarkOrange.f059159e.svg",
     "static/media/DeepRed.a765c2ac.svg": "/portfolio/static/media/DeepRed.a765c2ac.svg",
-    "static/media/Figma.81262526.svg": "/portfolio/static/media/Figma.81262526.svg",
+    "static/media/Figma.acf6dafc.svg": "/portfolio/static/media/Figma.acf6dafc.svg",
     "static/media/Grey.65e63dba.svg": "/portfolio/static/media/Grey.65e63dba.svg",
     "static/media/Jenkins.4b748d52.svg": "/portfolio/static/media/Jenkins.4b748d52.svg",
     "static/media/Nikhil_Patel_Resume.da8c6290.docx": "/portfolio/static/media/Nikhil_Patel_Resume.da8c6290.docx",
@@ -37,6 +37,6 @@
     "static/js/runtime-main.772c50c0.js",
     "static/js/2.0ae26177.chunk.js",
     "static/css/main.1d2241af.chunk.css",
-    "static/js/main.1371e7ac.chunk.js"
+    "static/js/main.7d8ac537.chunk.js"
   ]
 }
