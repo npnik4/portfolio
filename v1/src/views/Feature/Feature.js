@@ -7,6 +7,7 @@ import ScanAvert from "../../assets/scanavert/X_frame.png";
 import gif from "../../assets/scanavert/bCode_Fav.gif";
 import Card from "../../components/Grid/Card";
 import "./Feature.scss";
+import Carousel from "../../components/Carousel/Carousel";
 
 function Feature() {
   const [active, setActive] = useState([false, false]);
@@ -16,12 +17,6 @@ function Feature() {
     const newActive = Object.assign([], active);
     newActive[index] = !newActive[index];
     setActive(newActive);
-  };
-
-  const imageStyles = {
-    objectFit: "contain",
-    maxWidth: "30%",
-    maxHeight: "100%",
   };
 
   return (
@@ -39,9 +34,7 @@ function Feature() {
             active={active[0]}
             link="https://npnik4.github.io/assets/docs/UrRecalls.pdf"
           >
-            <img src={homeScreen} alt="urrecalls" style={imageStyles} />
-            <img src={logo} alt="urrecalls" style={imageStyles} className="extra-images"/>
-            <img src={recall} alt="urrecalls" style={imageStyles} className="extra-images"/>
+            <Carousel images={[homeScreen, logo, recall]}/>
           </Card>
         </div>
         <div className="item">
@@ -53,8 +46,7 @@ function Feature() {
             active={active[1]}
             link="https://npnik4.github.io/assets/docs/Scan%20Avert.pdf"
           >
-            <img src={ScanAvert} alt="ScanAvert" style={imageStyles} />
-            <img src={gif} alt="ScanAvert" style={imageStyles} className="extra-images"/>
+            <Carousel images={[ScanAvert, gif]}/>
           </Card>
         </div>
       </div>
