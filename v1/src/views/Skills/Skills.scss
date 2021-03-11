@@ -3,6 +3,23 @@
   display: flex;
   flex-direction: column;
   padding: 3em;
+  position: relative;
+
+  .deepRed {
+    position: absolute;
+    z-index: -1;
+    top: 35vh;
+    right: -200px;
+    filter: blur(200px) brightness(1.5);
+  }
+
+  .barney {
+    position: absolute;
+    z-index: -1;
+    top: 35vh;
+    left: -200px;
+    filter: blur(200px) brightness(2);
+  }
 
   .row {
     display: flex;
@@ -46,12 +63,12 @@
       opacity: 1;
     }
 
-    .heading{
+    .heading {
       font-size: 2em;
       padding: 1em 0;
 
       span {
-        color: #4F05FF;
+        color: #4f05ff;
       }
     }
   }
@@ -83,6 +100,25 @@
       }
     }
 
+    .deepRed {
+      position: absolute;
+      z-index: -1;
+      top: 0vh;
+      left: 0;
+      filter: blur(200px) brightness(1.5);
+      width: 90%;
+      overflow: hidden;
+    }
+  
+    .barney {
+      position: absolute;
+      z-index: -1;
+      top: 50vh;
+      left: 0;
+      filter: blur(200px) brightness(2);
+      width: 90%;
+      overflow: hidden;
+    }
   }
 
   @media screen and (max-width: 500px) {

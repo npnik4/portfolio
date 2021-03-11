@@ -4,20 +4,22 @@ import "./Skills.scss";
 import redux from "../../assets/Redux.svg";
 import jenkins from "../../assets/Jenkins.svg";
 import figma from "../../assets/Figma.svg";
-import Flip from 'react-reveal/Flip';
-import Pulse from 'react-reveal/Pulse';
+import Flip from "react-reveal/Flip";
+import Pulse from "react-reveal/Pulse";
+import deepRed from "../../assets/DeepRed.svg";
+import barney from "../../assets/barney.svg";
 
 function Skills() {
   return (
     <Container maxWidth="lg" className="skillContainer" id="skills">
       <div className="row">
-      <Pulse>
-        <div className="heading">
-          <span>Skills</span> I've picked up along the way.
-        </div>
-      </Pulse>
+        <Pulse>
+          <div className="heading">
+            <span>Skills</span> I've picked up along the way.
+          </div>
+        </Pulse>
       </div>
-      <Flip bottom >
+      <Flip bottom>
         <div className="row">
           <div className="skillCell">
             <i className="devicon-javascript-plain"></i>
@@ -86,6 +88,8 @@ function Skills() {
           </div>
         </div>
       </Flip>
+      <img src={deepRed} alt="shape" className="deepRed" />
+      <img src={barney} alt="shape" className="barney" />
     </Container>
   );
 }

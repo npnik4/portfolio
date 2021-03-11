@@ -3,20 +3,25 @@ import React from "react";
 import { Container } from "@material-ui/core";
 import PhotoCard from "../../components/PhotoCard/PhotoCard";
 import "./About.scss";
-import Flip from 'react-reveal/Flip';
+import Fade from "react-reveal/Fade";
+import orange from "../../assets/DarkOrange.svg";
+import aqua from "../../assets/Aqua.svg";
+import blue from "../../assets/BabyBlue.svg";
 
 function About() {
   return (
     <Container maxWidth="lg" className="about" id="about">
-      <h1 className="heading"><span>About</span> me.</h1>
-      <Flip bottom>
+      <h1 className="heading">
+        <span>About</span> me.
+      </h1>
+      <Fade left duration={500}>
         <div className="card">
           <div className="about-text">
             <p>I'm Nikhil, a software developer based in NJ.</p>
             <p>
               My mission is to create life enhancing tools that actually make a
-              great impact, whether that be websites, applications, or anything in
-              between.
+              great impact, whether that be websites, applications, or anything
+              in between.
             </p>
             <p>
               BS in Computer Science & Engineering Technology from{" "}
@@ -44,7 +49,10 @@ function About() {
             <PhotoCard />
           </div>
         </div>
-      </Flip>
+      </Fade>
+      <img src={orange} alt="shape" className="orange" />
+      <img src={aqua} alt="shape" className="aqua" />
+      <img src={blue} alt="shape" className="blue" />
     </Container>
   );
 }
