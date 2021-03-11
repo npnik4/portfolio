@@ -16,6 +16,11 @@ function Feature() {
     setActive(Object.assign([], [false, false]));
     const newActive = Object.assign([], active);
     newActive[index] = !newActive[index];
+    if(newActive[index]) {
+      var offset = 50;
+      var el = document.getElementById('featureWork');
+      window.scroll({ top: (el.offsetTop - offset), left: 0, behavior: 'smooth' });
+    }
     setActive(newActive);
   };
 
@@ -24,13 +29,13 @@ function Feature() {
       <h1 className="title">
         Featured <span>Projects</span>.
       </h1>
-      <div className="item-container">
+      <div className="item-container" id="featureWork">
         <div className="item">
           <Card
             toggle={() => toggle(0)}
             name="UrRecalls"
             description="In the UrRecalls app, you can scan the barcode of your product, or search by product name to get recall information."
-            css="linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%)"
+            css="linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)"
             active={active[0]}
             link="https://npnik4.github.io/assets/docs/UrRecalls.pdf"
           >

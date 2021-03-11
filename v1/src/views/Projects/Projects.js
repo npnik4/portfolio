@@ -3,6 +3,12 @@ import { Container } from "@material-ui/core";
 import React, { useState } from "react";
 import "./Projects.scss";
 import Card from "../../components/Grid/Card";
+import rl from '../../assets/rl.svg';
+import Parallax from '../../assets/parallax/motivation';
+import Carousel from '../../components/Carousel/Carousel';
+import instaHome from '../../assets/instaCook/instacook_home.png';
+import instaSelect from '../../assets/instaCook/instacook_select.png';
+import instaCam from '../../assets/instaCook/instacook_cam.png';
 
 function Projects() {
   const [active, setActive] = useState([false, false, false, false, false, false]);
@@ -15,12 +21,19 @@ function Projects() {
       var offset = 50;
       var el = document.getElementById('gridStart');
       window.scroll({ top: (el.offsetTop - offset), left: 0, behavior: 'smooth' });
-    } 
+    }
     else {
       document.getElementById(index + '').scrollIntoView();
     }
     setActive(newActive);
   };
+
+  const imageStyles = {
+    objectFit: "contain",
+    maxWidth: "30%",
+    maxHeight: "100%",
+  };
+
 
   return (
     <Container maxWidth="lg" className="projects" id="work">
@@ -34,17 +47,21 @@ function Projects() {
             css="linear-gradient(to top, #a8edea 0%, #fed6e3 100%)"
             active={active[0]}
             link="https://rl-inc.io/"
-          />
+          >
+            <img src={rl} alt="urrecalls" style={imageStyles} />
+          </Card>
         </div>
         <div className="work2" id="1">
           <Card
             toggle={() => toggle(1)}
             name="MOTIVATION"
-            description="Experiment with parallax effect using React.js."
+            description="Experiment with parallax effect using React.js. Try it out above."
             css="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
             active={active[1]}
             link="https://npnik4.github.io/Animated-React-Webpage/"
-          />
+          >
+            <Parallax/>
+          </Card>
         </div>
         <div className="work3" id="2">
           <Card
@@ -54,7 +71,9 @@ function Projects() {
             css="linear-gradient(to top, #d299c2 0%, #fef9d7 100%)"
             active={active[2]}
             link="https://devpost.com/software/funcooker"
-          />
+          >
+            <Carousel images={[instaHome, instaSelect, instaCam]} />
+          </Card>
         </div>
         <div className="work4" id="3">
           <Card

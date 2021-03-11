@@ -1,8 +1,18 @@
 .footer {
   margin-top: 5em;
   height: 200px;
-  background-color: rgba(230, 230, 230, 0.404);
+  background: linear-gradient(
+      109.26deg,
+      rgba(255, 255, 255, 0.555) 0%,
+      rgba(255, 255, 255, 0.13) 100.54%
+    );
   padding: 3em;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
   .image {
     display: flex;
     flex-direction: row;
@@ -11,8 +21,63 @@
     justify-content: center;
     align-items: center;
     img {
-      width: 200px;
+      height: 100%;
       object-fit: contain;
+    }
+  }
+  .text {
+    color: #777777;
+    padding: 10px;
+  }
+  .yellow {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: -100px;
+    filter: blur(180px);
+  }
+  .hotPink {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 30%;
+    filter: blur(180px) brightness(1.5);
+  }
+  .brightblue {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: -100px;
+    filter: blur(180px);
+  }
+
+  @media screen and (max-width: 960px) {
+    .yellow {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: -100px;
+      filter: blur(150px);
+      width: 90%;
+      overflow: hidden;
+    }
+    .hotPink {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 10%;
+      filter: blur(150px) brightness(1.5);
+      width: 90%;
+      overflow: hidden;
+    }
+    .brightblue {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: -200px;
+      filter: blur(150px);
+      width: 90%;
+      overflow: hidden;
     }
   }
 }
