@@ -9,6 +9,13 @@ import Carousel from '../../components/Carousel/Carousel';
 import instaHome from '../../assets/instaCook/instacook_home.png';
 import instaSelect from '../../assets/instaCook/instacook_select.png';
 import instaCam from '../../assets/instaCook/instacook_cam.png';
+import riseLogin from '../../assets/rise/rise_login.png';
+import riseHome from '../../assets/rise/rise_home.png';
+import riseTasks from '../../assets/rise/rise_tasks.png';
+import riseProfile from '../../assets/rise/rise_profile.png';
+import riseAddress from '../../assets/rise/rise_address.png';
+import drink from '../../assets/drink.jpg';
+import escape from '../../assets/orphan_logo_1.png';
 
 function Projects() {
   const [active, setActive] = useState([false, false, false, false, false, false]);
@@ -30,7 +37,7 @@ function Projects() {
 
   const imageStyles = {
     objectFit: "contain",
-    maxWidth: "30%",
+    maxWidth: "40%",
     maxHeight: "100%",
   };
 
@@ -56,7 +63,7 @@ function Projects() {
             toggle={() => toggle(1)}
             name="MOTIVATION"
             description="Experiment with parallax effect using React.js. Try it out above."
-            css="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
+            css="linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)"
             active={active[1]}
             link="https://npnik4.github.io/Animated-React-Webpage/"
           >
@@ -76,14 +83,16 @@ function Projects() {
           </Card>
         </div>
         <div className="work4" id="3">
-          <Card
+        <Card
             toggle={() => toggle(3)}
-            name="CHUGG"
-            description="Chugg and plug your homework with our homework solution platform!"
-            css="linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)"
+            name="RISE"
+            description="Simplify your morning routine, from the minute you wake up, to second you start work."
+            css="linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%)"
             active={active[3]}
-            link="https://devpost.com/software/chugg"
-          />
+            link="https://npnik4.github.io/images/RiseScreens.svg"
+          >
+            <Carousel images={[riseLogin, riseHome, riseTasks, riseProfile, riseAddress]} />
+          </Card>
         </div>
         <div className="work5" id="4">
           <Card
@@ -93,17 +102,21 @@ function Projects() {
             css="linear-gradient(120deg, #f093fb 0%, #f5576c 100%)"
             active={active[4]}
             link="https://devpost.com/software/tell-me-the-drink"
-          />
+          >
+            <img src={drink} alt="urrecalls" style={imageStyles} />
+          </Card>
         </div>
         <div className="work6" id="5">
-          <Card
+        <Card
             toggle={() => toggle(5)}
-            name="RISE"
-            description="Simplify your morning routine, from the minute you wake up, to second you start work."
-            css="linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%)"
+            name="ESCAPE THE ORPHANAGE"
+            description="Fed up with life at the orphanage, orphan #0087 decides to escape only to be hindered by the orphanage's many traps."
+            css="linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%)"
             active={active[5]}
-            link="https://npnik4.github.io/images/RiseScreens.svg"
-          />
+            link="https://globalgamejam.org/2019/games/escape-orphanage"
+          >
+            <img src={escape} alt="urrecalls" style={imageStyles} />
+          </Card>
         </div>
       </div>
     </Container>

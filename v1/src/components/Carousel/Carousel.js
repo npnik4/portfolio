@@ -31,11 +31,11 @@ function Carousel(props) {
 
     return (
         <div className="carousel">
-            <div className="leftButton" onClick={() => moveLeft()}>{"<"}</div>
+            <div className="button" onClick={() => moveLeft()}>{"<"}</div>
             <div className="content">
                 <img src={props.images[currentImg]} alt="urrecalls" style={imageStyles} />
             </div>
-            <div className="rightButton" onClick={() => moveRight()}>{">"}</div>
+            <div className="button" onClick={() => moveRight()}>{">"}</div>
         </div>
     )
 }

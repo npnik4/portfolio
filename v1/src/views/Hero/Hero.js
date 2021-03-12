@@ -9,6 +9,7 @@ import grey from "../../assets/Grey.svg";
 // import HeroImage from '../../components/HeroImage/HeroImage';
 import { Button } from "@material-ui/core";
 import Fade from "react-reveal/Fade";
+import hero from '../../assets/HeroImage.svg';
 
 function Hero() {
   const contact = () => {
@@ -41,7 +42,11 @@ function Hero() {
         </Fade>
         <div className="scroll" onClick={() => scroll()}></div>
       </div>
-      <div className="image">{/* <HeroImage/> */}</div>
+      <div className="image">
+        <Fade right>
+          <img src={hero} alt="hero"/>
+        </Fade>
+      </div>
       <img src={purple} alt="shape" className="purple " />
       <img src={blue} alt="shape" className="blue " />
       <img src={red} alt="shape" className="red " />

@@ -54,3 +54,78 @@
   top: 0ch;
   left: 50%;
 }
+
+
+@media screen and (max-width: 960px) {
+  .card1 {
+    width: 14ch;
+    height: 7ch;
+    top: 0ch;
+    left: 1ch;
+  }
+  
+  .card2 {
+    width: 14ch;
+    height: 7ch;
+    top: 2ch;
+    right: -3ch;
+  }
+  
+  .card3 {
+    width: 14ch;
+    height: 7ch;
+    bottom: 0ch;
+    right: 0ch;
+  }
+  
+  .card4 {
+    width: 20ch;
+    height: 18ch;
+    top: 8ch;
+    left: 40%;
+  }
+  
+  .card5 {
+    width: 12ch;
+    height: 18ch;
+    top: 0ch;
+    left: 55%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .card1 {
+    width: 14ch;
+    height: 7ch;
+    top: 0ch;
+    left: -5ch;
+  }
+  
+  .card2 {
+    width: 14ch;
+    height: 7ch;
+    top: 2ch;
+    right: -8ch;
+  }
+  
+  .card3 {
+    width: 14ch;
+    height: 7ch;
+    bottom: 0ch;
+    right: 0ch;
+  }
+  
+  .card4 {
+    width: 20ch;
+    height: 18ch;
+    top: 8ch;
+    left: 10%;
+  }
+  
+  .card5 {
+    width: 12ch;
+    height: 18ch;
+    top: 0ch;
+    left: 40%;
+  }
+}

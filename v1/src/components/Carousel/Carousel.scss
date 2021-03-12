@@ -6,21 +6,14 @@
     width: 100%;
     height: 100%;
 
-    .leftButton {
+    .button {
         display: flex;
         flex-direction: column;
         width: 5%;
         justify-content: center;
         color: black;
-        font-size: 3em;
-    }
-    .rightButton {
-        display: flex;
-        flex-direction: column;
-        width: 5%;
-        justify-content: center;
-        color: black;
-        font-size: 3em;
+        font-size: 4em;
+        cursor: pointer;
     }
     .content {
         display: flex;
