@@ -8,6 +8,11 @@
   align-items: center;
   justify-content: flex-start;
 
+  .flex {
+    display: flex !important;
+    align-items: center;
+  }
+
   .scroll {
     bottom: 10px;
     position: absolute;
@@ -76,7 +81,6 @@
     .button {
       margin-top: 2em;
       padding: 0 5.3em;
-      width: 50%;
     }
   }
 
@@ -96,7 +100,6 @@
     left: -50px;
     filter: blur(150px) brightness(1.5);
     width: 45%;
-    // animation: side-anim 10s alternate-reverse infinite linear;
     overflow: hidden;
   }
   .blue {
@@ -106,7 +109,6 @@
     right: -10px;
     filter: blur(120px) brightness(1.2);
     width: 45%;
-    animation: side-anim 10s alternate-reverse infinite linear;
     overflow: hidden;
   }
   .red {
@@ -116,7 +118,6 @@
     right: 0px;
     filter: blur(150px) brightness(1.5);
     width: 40%;
-    animation: rotate-anim 10s alternate-reverse infinite linear;
     overflow: hidden;
   }
   .orange {
@@ -126,7 +127,6 @@
     left: -100px;
     filter: blur(170px);
     width: 40%;
-    animation: rotate-anim 10s alternate-reverse infinite linear;
     overflow: hidden;
   }
   .grey {
@@ -233,7 +233,7 @@
       }
       .button {
         padding: 1em 3em;
-        width: 60%;
+        // width: 60%;
       }
     }
 
@@ -262,7 +262,7 @@
       }
       .button {
         padding: 1em 1em;
-        width: 60%;
+        // width: 60%;
       }
     }
   }

@@ -7,7 +7,7 @@ import red from "../../assets/Red.svg";
 import orange from "../../assets/Orange.svg";
 import grey from "../../assets/Grey.svg";
 // import HeroImage from '../../components/HeroImage/HeroImage';
-import { Button } from "@material-ui/core";
+import { Button, Container } from "@material-ui/core";
 import Fade from "react-reveal/Fade";
 import hero from '../../assets/HeroImage.svg';
 
@@ -21,6 +21,7 @@ function Hero() {
 
   return (
     <div className="container">
+      <Container maxWidth="xl" className="flex">
       <div className="text-container">
         <Fade left>
           <div className="text">
@@ -47,6 +48,7 @@ function Hero() {
           <img src={hero} alt="hero"/>
         </Fade>
       </div>
+      </Container>
       <img src={purple} alt="shape" className="purple " />
       <img src={blue} alt="shape" className="blue " />
       <img src={red} alt="shape" className="red " />

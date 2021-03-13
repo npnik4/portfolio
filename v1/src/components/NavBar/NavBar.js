@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import "./NavBar.scss";
 import logo from "../../assets/logo2.svg";
 import { Button } from "@material-ui/core";
-import res from '../../assets/docs/Nikhil_Patel_Resume.docx';
+import res from '../../assets/docs/Nikhil_Resume.pdf';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -82,7 +82,7 @@ function Navbar() {
             className="nav-button"
             size="small"
             color="secondary"
-            variant="outlined"
+            variant="contained"
             onClick={() => resume()}
           >
             Resume

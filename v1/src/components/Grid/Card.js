@@ -46,7 +46,7 @@ function Card(props) {
           delay={active ? 0 : 400}
         >
           <motion.div className="default">
-            <div style={{ zIndex: 1 }}>{name}</div>
+            <div style={{ zIndex: 1, textAlign: "center", lineHeight: "1em" }}>{name}</div>
           </motion.div>
         </Fade>
       </motion.div>
