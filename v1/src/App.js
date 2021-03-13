@@ -1,10 +1,12 @@
 import "./App.scss";
+import React, { useState, useEffect } from "react";
+import Preloader from "./components/Preloader/Preloader";
 import Navbar from "./components/NavBar/NavBar";
 import Hero from "./views/Hero/Hero";
 import About from "./views/About/About";
 import Skills from "./views/Skills/Skills";
-import Projects from './views/Projects/Projects';
-import Feature from './views/Feature/Feature';
+import Projects from "./views/Projects/Projects";
+import Feature from "./views/Feature/Feature";
 import Footer from "./views/Footer/Footer";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
@@ -37,16 +39,31 @@ function App() {
     },
   });
 
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
+
   return (
-    <ThemeProvider theme={theme}>
-      <Navbar />
-      <Hero />
-      <Feature/>
-      <About />
-      <Skills />
-      <Projects />
-      <Footer />
-    </ThemeProvider>
+    <>
+      {loading ? (
+        <Preloader loading={loading} />
+      ) : (
+        <ThemeProvider theme={theme}>
+          <Navbar />
+          <Hero />
+          <Feature />
+          <About />
+          <Skills />
+          <Projects />
+          <Footer />
+        </ThemeProvider>
+      )}
+    </>
   );
 }
 

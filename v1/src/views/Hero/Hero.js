@@ -23,7 +23,7 @@ function Hero() {
     <div className="container">
       <Container maxWidth="xl" className="flex">
       <div className="text-container">
-        <Fade left>
+        <Fade left delay={700}>
           <div className="text">
             <h1 className="name">
               Hi, I'm <span className="color">Nikhil</span>.
@@ -44,7 +44,7 @@ function Hero() {
         <div className="scroll" onClick={() => scroll()}></div>
       </div>
       <div className="image">
-        <Fade right>
+        <Fade right delay={700}>
           <img src={hero} alt="hero"/>
         </Fade>
       </div>

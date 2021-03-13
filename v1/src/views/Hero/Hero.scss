@@ -65,7 +65,6 @@
         font-size: 5em;
         font-weight: 600;
         margin: 0;
-        // text-shadow: -6px 4px 4px #994BFF;
       }
       .color {
         color: #4f05ff; //#00b8f0;
@@ -94,40 +93,73 @@
   }
 
   .purple {
-    position: absolute;
+    // position: absolute;
+    // top: 55vh;
+    // left: -50px;
+    // width: 45%;
     z-index: -1;
-    top: 55vh;
-    left: -50px;
     filter: blur(150px) brightness(1.5);
-    width: 45%;
     overflow: hidden;
+    position:absolute;
+    top:30%;
+    left:40%;
+    width:0;
+    padding:0;
+    animation: explodePurple 1s forwards;
   }
   .blue {
-    position: absolute;
+    // position: absolute;
+    // z-index: -1;
+    // top: -150px;
+    // right: -10px;
+    // filter: blur(120px) brightness(1.2);
+    // width: 45%;
+    // overflow: hidden;
     z-index: -1;
-    top: -150px;
-    right: -10px;
     filter: blur(120px) brightness(1.2);
-    width: 45%;
     overflow: hidden;
+    position:absolute;
+    top:30%;
+    right:40%;
+    width:0;
+    padding:0;
+    animation: explodeBlue 1s forwards;
   }
   .red {
-    position: absolute;
+    // position: absolute;
+    // z-index: -1;
+    // top: 55vh;
+    // right: 0px;
+    // filter: blur(150px) brightness(1.5);
+    // width: 40%;
+    // overflow: hidden;
     z-index: -1;
-    top: 55vh;
-    right: 0px;
     filter: blur(150px) brightness(1.5);
-    width: 40%;
     overflow: hidden;
+    position:absolute;
+    top:30%;
+    right:40%;
+    width:0;
+    padding:0;
+    animation: explodeRed 1s forwards;
   }
   .orange {
-    position: absolute;
+    // position: absolute;
+    // z-index: -2;
+    // top: -220px;
+    // left: -100px;
+    // filter: blur(170px);
+    // width: 40%;
+    // overflow: hidden;
     z-index: -2;
-    top: -220px;
-    left: -100px;
     filter: blur(170px);
-    width: 40%;
     overflow: hidden;
+    position:absolute;
+    top:30%;
+    left:40%;
+    width:0;
+    padding:0;
+    animation: explodeOrange 1s forwards;
   }
   .grey {
     position: absolute;
@@ -139,23 +171,54 @@
     overflow: hidden;
   }
 
-  @keyframes rotate-anim {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(90deg);
-    }
+  @keyframes explodePurple {
+    0% {
+        width:40%
+     }
+    100%{
+        width:45%;
+        top: 55vh;
+        left: -50px;
+        padding:5px;
+     }
   }
 
-  @keyframes side-anim {
-    from {
-      transform: translateX(-10px);
-    }
-    to {
-      transform: translateX(200px);
-    }
+  @keyframes explodeBlue {
+    0% {
+        width:40%
+     }
+    100%{
+        width:45%;
+        top: -150px;
+        right: -10px;
+        padding:5px;
+     }
   }
+
+  @keyframes explodeRed {
+    0% {
+        width:40%
+     }
+    100%{
+        width: 40%;
+        top: 55vh;
+        right: 0px;
+        padding:5px;
+     }
+  }
+
+  @keyframes explodeOrange {
+    0% {
+        width:40%
+     }
+    100%{
+        width: 40%;
+        top: -220px;
+        left: -100px;
+        padding:5px;
+     }
+  }
+
 
   @media screen and (max-width: 960px) {
     .purple {
