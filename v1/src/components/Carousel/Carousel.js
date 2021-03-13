@@ -33,7 +33,7 @@ function Carousel(props) {
         <div className="carousel">
             <div className="button" onClick={() => moveLeft()}>{"<"}</div>
             <div className="content">
-                <img src={props.images[currentImg]} alt="urrecalls" style={imageStyles} />
+                <img src={props.images[currentImg]} alt="urrecalls" style={props.styles ? props.styles[currentImg] : imageStyles} />
             </div>
             <div className="button" onClick={() => moveRight()}>{">"}</div>
         </div>

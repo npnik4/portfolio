@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container } from "@material-ui/core";
 import homeScreen from "../../assets/urRecalls/home_screen.png";
-import recall from "../../assets/urRecalls/recall.jpg";
+import recall from "../../assets/urRecalls/recall.png";
 import logo from "../../assets/urRecalls/logo.png";
 import ScanAvert from "../../assets/scanavert/X_frame.png";
 import gif from "../../assets/scanavert/bCode_Fav.gif";
@@ -16,10 +16,14 @@ function Feature() {
     setActive(Object.assign([], [false, false]));
     const newActive = Object.assign([], active);
     newActive[index] = !newActive[index];
-    if(newActive[index]) {
+    if (newActive[index]) {
       var offset = 50;
-      var el = document.getElementById('featureWork');
-      window.scroll({ top: (el.offsetTop - offset), left: 0, behavior: 'smooth' });
+      var el = document.getElementById("featureWork");
+      window.scroll({
+        top: el.offsetTop - offset,
+        left: 0,
+        behavior: "smooth",
+      });
     }
     setActive(newActive);
   };
@@ -39,7 +43,7 @@ function Feature() {
             active={active[0]}
             link="https://npnik4.github.io/assets/docs/UrRecalls.pdf"
           >
-            <Carousel images={[homeScreen, logo, recall]}/>
+            <Carousel images={[logo, homeScreen, recall]} />
           </Card>
         </div>
         <div className="item">
@@ -51,7 +55,13 @@ function Feature() {
             active={active[1]}
             link="https://npnik4.github.io/assets/docs/Scan%20Avert.pdf"
           >
-            <Carousel images={[ScanAvert, gif]}/>
+            <Carousel
+              images={[ScanAvert, gif]}
+              styles={[
+                { objectFit: "contain", maxWidth: "30%", maxHeight: "100%" },
+                { objectFit: "contain", maxWidth: "40%", maxHeight: "100%" },
+              ]}
+            />
           </Card>
         </div>
       </div>

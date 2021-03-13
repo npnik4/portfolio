@@ -171,14 +171,14 @@
   border-color: #ca6a9a !important;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
   .details {
     .info-container {
       display: flex;
       flex-direction: column;
       
       img {
-        max-width: 65% !important;
+        max-width: 64% !important;
       }
 
     }
