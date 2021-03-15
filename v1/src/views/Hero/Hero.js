@@ -28,7 +28,7 @@ function Hero() {
             <h1 className="name">
               Hi, I'm <span className="color">Nikhil</span>.
             </h1>
-            <p className="additional">I build things for the web.</p>
+            <p className="additional">I build tools for the web.</p>
           </div>
           <div className="button">
             <Button

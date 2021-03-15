@@ -8,6 +8,7 @@ import gif from "../../assets/scanavert/bCode_Fav.gif";
 import Card from "../../components/Grid/Card";
 import "./Feature.scss";
 import Carousel from "../../components/Carousel/Carousel";
+import {urRecalls, scanavert} from './data';
 
 function Feature() {
   const [active, setActive] = useState([false, false]);
@@ -38,19 +39,19 @@ function Feature() {
           <Card
             toggle={() => toggle(0)}
             name="UrRecalls"
-            description="In the UrRecalls app, you can scan the barcode of your product, or search by product name to get recall information."
+            description={urRecalls.headline}
             css="linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)"
             active={active[0]}
             link="https://npnik4.github.io/assets/docs/UrRecalls.pdf"
           >
-            <Carousel images={[logo, homeScreen, recall]} />
+            <Carousel images={[logo, homeScreen, recall]} description={urRecalls.description}/>
           </Card>
         </div>
         <div className="item">
           <Card
             toggle={() => toggle(1)}
             name="SCANAVERT"
-            description="ScanAvert simplifies the process of making safer, compatible food choices."
+            description={scanavert.headline}
             css="linear-gradient(120deg, #f6d365 0%, #fda085 100%)"
             active={active[1]}
             link="https://npnik4.github.io/assets/docs/Scan%20Avert.pdf"
@@ -58,9 +59,10 @@ function Feature() {
             <Carousel
               images={[ScanAvert, gif]}
               styles={[
-                { objectFit: "contain", maxWidth: "30%", maxHeight: "100%" },
-                { objectFit: "contain", maxWidth: "40%", maxHeight: "100%" },
+                { objectFit: "contain", maxWidth: "27%", maxHeight: "100%" },
+                { objectFit: "contain", maxWidth: "20%", maxHeight: "100%" },
               ]}
+              description={scanavert.description}
             />
           </Card>
         </div>
