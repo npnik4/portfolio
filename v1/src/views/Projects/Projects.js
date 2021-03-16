@@ -3,34 +3,45 @@ import { Container } from "@material-ui/core";
 import React, { useState } from "react";
 import "./Projects.scss";
 import Card from "../../components/Grid/Card";
-import rl from '../../assets/rl.svg';
-import Parallax from '../../assets/parallax/motivation';
-import Carousel from '../../components/Carousel/Carousel';
-import instaHome from '../../assets/instaCook/instacook_home.png';
-import instaSelect from '../../assets/instaCook/instacook_select.png';
-import instaCam from '../../assets/instaCook/instacook_cam.png';
-import riseLogin from '../../assets/rise/rise_login.png';
-import riseHome from '../../assets/rise/rise_home.png';
-import riseTasks from '../../assets/rise/rise_tasks.png';
-import riseProfile from '../../assets/rise/rise_profile.png';
-import riseAddress from '../../assets/rise/rise_address.png';
-import drink from '../../assets/drink.jpg';
-import escape from '../../assets/orphan_logo_1.png';
+import rl from "../../assets/rl.svg";
+import Parallax from "../../assets/parallax/motivation";
+import Carousel from "../../components/Carousel/Carousel";
+import instaHome from "../../assets/instaCook/instacook_home.png";
+import instaSelect from "../../assets/instaCook/instacook_select.png";
+import instaCam from "../../assets/instaCook/instacook_cam.png";
+import riseLogin from "../../assets/rise/rise_login.png";
+import riseHome from "../../assets/rise/rise_home.png";
+import riseTasks from "../../assets/rise/rise_tasks.png";
+import riseProfile from "../../assets/rise/rise_profile.png";
+import riseAddress from "../../assets/rise/rise_address.png";
+import drink from "../../assets/drink.jpg";
+import escape from "../../assets/orphan_logo_1.png";
+import { rlInc, rise } from "./data";
 
 function Projects() {
-  const [active, setActive] = useState([false, false, false, false, false, false]);
+  const [active, setActive] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
 
   const toggle = (index) => {
     setActive(Object.assign([], [false, false, false, false, false, false]));
     const newActive = Object.assign([], active);
     newActive[index] = !newActive[index];
-    if(newActive[index]) {
-      var offset = 50;
-      var el = document.getElementById('gridStart');
-      window.scroll({ top: (el.offsetTop - offset), left: 0, behavior: 'smooth' });
-    }
-    else {
-      document.getElementById(index + '').scrollIntoView();
+    if (newActive[index]) {
+      var offset = window.innerWidth < 500 ? 20 : 50;
+      var el = document.getElementById("gridStart");
+      window.scroll({
+        top: el.offsetTop - offset,
+        left: 0,
+        behavior: "smooth",
+      });
+    } else {
+      document.getElementById(index + "").scrollIntoView();
     }
     setActive(newActive);
   };
@@ -41,33 +52,47 @@ function Projects() {
     maxHeight: "100%",
   };
 
-
   return (
     <Container maxWidth="lg" className="projects" id="work">
-      <h1 className="title">My <span>Work</span>.</h1>
+      <h1 className="title">
+        My <span>Work</span>.
+      </h1>
       <div className="work-grid" id="gridStart">
         <div className="work1" id="0">
           <Card
             toggle={() => toggle(0)}
             name="RL INC. HOMEPAGE"
-            description="Make integrating artificial intelligence into your games easy and simple."
+            description={rlInc.headline}
             css="linear-gradient(to top, #a8edea 0%, #fed6e3 100%)"
             active={active[0]}
             link="https://rl-inc.io/"
           >
-            <img src={rl} alt="urrecalls" style={imageStyles} />
+            <Carousel
+              images={[rl]}
+              description={rlInc.description}
+              styles={[imageStyles]}
+            />
           </Card>
         </div>
         <div className="work2" id="1">
           <Card
             toggle={() => toggle(1)}
-            name="MOTIVATION"
-            description="Experiment with parallax effect using React.js. Try it out above."
-            css="linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)"
+            name="RISE"
+            description={rise.headline}
+            css="linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%)"
             active={active[1]}
-            link="https://npnik4.github.io/Animated-React-Webpage/"
+            link="https://npnik4.github.io/images/RiseScreens.svg"
           >
-            <Parallax/>
+            <Carousel
+              images={[
+                riseLogin,
+                riseHome,
+                riseTasks,
+                riseProfile,
+                riseAddress,
+              ]}
+              description={rise.description}
+            />
           </Card>
         </div>
         <div className="work3" id="2">
@@ -83,15 +108,15 @@ function Projects() {
           </Card>
         </div>
         <div className="work4" id="3">
-        <Card
+          <Card
             toggle={() => toggle(3)}
-            name="RISE"
-            description="Simplify your morning routine, from the minute you wake up, to second you start work."
-            css="linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%)"
+            name="MOTIVATION"
+            description="Experiment with parallax effect using React.js. Try it out above."
+            css="linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)"
             active={active[3]}
-            link="https://npnik4.github.io/images/RiseScreens.svg"
+            link="https://npnik4.github.io/Animated-React-Webpage/"
           >
-            <Carousel images={[riseLogin, riseHome, riseTasks, riseProfile, riseAddress]} />
+            <Parallax />
           </Card>
         </div>
         <div className="work5" id="4">
@@ -107,7 +132,7 @@ function Projects() {
           </Card>
         </div>
         <div className="work6" id="5">
-        <Card
+          <Card
             toggle={() => toggle(5)}
             name="ESCAPE THE ORPHANAGE"
             description="Fed up with life at the orphanage, orphan #0087 decides to escape only to be hindered by the orphanage's many traps."

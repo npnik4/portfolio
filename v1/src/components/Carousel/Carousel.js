@@ -3,6 +3,7 @@ import "./Carousel.scss";
 
 function Carousel(props) {
   const [currentImg, setImg] = useState(0);
+  const multiImage = props.images.length > 1;
 
   const imageStyles = {
     objectFit: "contain",
@@ -28,9 +29,11 @@ function Carousel(props) {
 
   return (
     <div className="carousel">
-      <div className="button" onClick={() => moveLeft()}>
-        {"<"}
-      </div>
+      {multiImage ? (
+        <div className="button" onClick={() => moveLeft()}>
+          {"<"}
+        </div>
+      ) : null}
       <div className="content">
         <img
           src={props.images[currentImg]}
@@ -42,9 +45,11 @@ function Carousel(props) {
           <p className="description">{props.description[currentImg]}</p>
         ) : null}
       </div>
-      <div className="button" onClick={() => moveRight()}>
-        {">"}
-      </div>
+      {multiImage ? (
+        <div className="button" onClick={() => moveRight()}>
+          {">"}
+        </div>
+      ) : null}
     </div>
   );
 }

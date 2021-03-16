@@ -60,7 +60,7 @@ function Feature() {
               images={[ScanAvert, gif]}
               styles={[
                 { objectFit: "contain", maxWidth: "27%", maxHeight: "100%" },
-                { objectFit: "contain", maxWidth: "20%", maxHeight: "100%" },
+                { objectFit: "contain", maxWidth: "15%", maxHeight: "100%" },
               ]}
               description={scanavert.description}
             />

@@ -172,15 +172,31 @@
 }
 
 @media screen and (max-width: 500px) {
+
+  .expandedCell {
+    height: 95vh;
+  }
   .details {
+    padding: 10px;
     .info-container {
       display: flex;
       flex-direction: column;
+      padding: 0.2em;
+      height: 78%;
       
       img {
         max-width: 64% !important;
       }
 
     }
+  }
+  .details p {
+    color: #777777;
+    font-size: 1em;
+    line-height: 1.2em;
+    margin: 0;
+    padding-top: 6px;
+    text-transform: none;
+    width: 95%;
   }
 }
