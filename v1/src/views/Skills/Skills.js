@@ -58,8 +58,8 @@ function Skills() {
             <span className="name">React.js</span>
           </div>
           <div className="skillCell">
-          <i className="devicon-redux-original"></i>
-          <span className="name">Redux</span>
+            <i className="devicon-redux-original"></i>
+            <span className="name">Redux</span>
           </div>
           <div className="skillCell">
             <i className="devicon-django-plain"></i>
@@ -82,8 +82,8 @@ function Skills() {
             <span className="name">BitBucket</span>
           </div>
           <div className="skillCell">
-          <i className="devicon-jenkins-line"></i>
-          <span className="name">Jenkins</span>
+            <i className="devicon-jenkins-line"></i>
+            <span className="name">Jenkins</span>
           </div>
           <div className="skillCell">
             <i className="devicon-confluence-original"></i>
