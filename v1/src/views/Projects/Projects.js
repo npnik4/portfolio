@@ -15,8 +15,8 @@ import riseTasks from "../../assets/rise/rise_tasks.png";
 import riseProfile from "../../assets/rise/rise_profile.png";
 import riseAddress from "../../assets/rise/rise_address.png";
 import drink from "../../assets/drink.jpg";
-import escape from "../../assets/orphan_logo_1.png";
-import { rlInc, rise } from "./data";
+import escape from "../../assets/escape-orphan.jpg";
+import { rlInc, rise, instaCook } from "./data";
 
 function Projects() {
   const [active, setActive] = useState([
@@ -48,7 +48,7 @@ function Projects() {
 
   const imageStyles = {
     objectFit: "contain",
-    maxWidth: "40%",
+    maxWidth: "100%",
     maxHeight: "100%",
   };
 
@@ -70,7 +70,7 @@ function Projects() {
             <Carousel
               images={[rl]}
               description={rlInc.description}
-              styles={[imageStyles]}
+              styles={[{...imageStyles, maxWidth: '40%'}]}
             />
           </Card>
         </div>
@@ -99,12 +99,12 @@ function Projects() {
           <Card
             toggle={() => toggle(2)}
             name="INSTACOOK"
-            description="Wasting your food cause you don't know what/how to cook? Use our app! Our proprietary AI algorithm will take your unused ingredients and generate new recipes for you to whip-up!"
+            description={instaCook.headline}
             css="linear-gradient(to top, #d299c2 0%, #fef9d7 100%)"
             active={active[2]}
             link="https://devpost.com/software/funcooker"
           >
-            <Carousel images={[instaHome, instaSelect, instaCam]} />
+            <Carousel images={[instaHome, instaSelect, instaCam]} description={instaCook.description}/>
           </Card>
         </div>
         <div className="work4" id="3">

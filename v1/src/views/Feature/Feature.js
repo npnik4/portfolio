@@ -18,7 +18,7 @@ function Feature() {
     const newActive = Object.assign([], active);
     newActive[index] = !newActive[index];
     if (newActive[index]) {
-      var offset = 50;
+      var offset = window.innerWidth < 500 ? 20 : 50;
       var el = document.getElementById("featureWork");
       window.scroll({
         top: el.offsetTop - offset,

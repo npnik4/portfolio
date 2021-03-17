@@ -1,9 +1,9 @@
 import { Container } from "@material-ui/core";
 import React from "react";
 import "./Skills.scss";
-import redux from "../../assets/Redux.svg";
-import jenkins from "../../assets/Jenkins.svg";
-import figma from "../../assets/Figma.svg";
+// import redux from "../../assets/Redux.svg";
+// import jenkins from "../../assets/Jenkins.svg";
+// import figma from "../../assets/Figma.svg";
 import Flip from "react-reveal/Flip";
 import Pulse from "react-reveal/Pulse";
 import deepRed from "../../assets/DeepRed.svg";
@@ -23,21 +23,27 @@ function Skills() {
         <div className="row">
           <div className="skillCell">
             <i className="devicon-javascript-plain"></i>
+            <span className="name">JavaScript</span>
           </div>
           <div className="skillCell">
             <i className="devicon-typescript-plain"></i>
+            <span className="name">TypeScript</span>
           </div>
           <div className="skillCell">
-            <i className="devicon-java-plain-wordmark"></i>
+            <i className="devicon-java-plain"></i>
+            <span className="name">Java</span>
           </div>
           <div className="skillCell">
-            <i className="devicon-python-plain-wordmark"></i>
+            <i className="devicon-python-plain"></i>
+            <span className="name">Python</span>
           </div>
           <div className="skillCell">
-            <i className="devicon-html5-plain-wordmark"></i>
+            <i className="devicon-html5-plain"></i>
+            <span className="name">HTML5</span>
           </div>
           <div className="skillCell">
-            <i className="devicon-css3-plain-wordmark"></i>
+            <i className="devicon-css3-plain"></i>
+            <span className="name">CSS3</span>
           </div>
         </div>
       </Flip>
@@ -45,46 +51,56 @@ function Skills() {
         <div className="row">
           <div className="skillCell">
             <i className="devicon-sass-original"></i>
+            <span className="name">SASS</span>
           </div>
           <div className="skillCell">
-            <i className="devicon-react-original-wordmark"></i>
+            <i className="devicon-react-original"></i>
+            <span className="name">React.js</span>
           </div>
-          {/* <i className="devicon-redux-original"></i> */}
           <div className="skillCell">
-            <img src={redux} alt="redux" className="img" />
+          <i className="devicon-redux-original"></i>
+          <span className="name">Redux</span>
           </div>
           <div className="skillCell">
             <i className="devicon-django-plain"></i>
+            <span className="name">Django Rest</span>
           </div>
           <div className="skillCell">
-            <i className="devicon-nodejs-plain-wordmark"></i>
+            <i className="devicon-nodejs-plain"></i>
+            <span className="name">Node.js</span>
           </div>
           <div className="skillCell">
-            <i className="devicon-github-original-wordmark"></i>
+            <i className="devicon-github-original"></i>
+            <span className="name">Github</span>
           </div>
         </div>
       </Flip>
       <Flip bottom delay={600}>
         <div className="row">
           <div className="skillCell">
-            <i className="devicon-bitbucket-original-wordmark"></i>
-          </div>
-          {/* <i className="devicon-jenkins-line"></i> */}
-          <div className="skillCell">
-            <img src={jenkins} alt="jenkins" className="img" />
+            <i className="devicon-bitbucket-original"></i>
+            <span className="name">BitBucket</span>
           </div>
           <div className="skillCell">
-            <i className="devicon-confluence-original-wordmark"></i>
+          <i className="devicon-jenkins-line"></i>
+          <span className="name">Jenkins</span>
           </div>
           <div className="skillCell">
-            <i className="devicon-amazonwebservices-plain-wordmark"></i>
+            <i className="devicon-confluence-original"></i>
+            <span className="name">Confluence</span>
           </div>
           <div className="skillCell">
-            <i className="devicon-firebase-plain-wordmark"></i>
+            <i className="devicon-amazonwebservices-plain"></i>
+            <span className="name">AWS</span>
           </div>
-          {/* <i className="devicon-sketch-line-wordmark"></i> */}
           <div className="skillCell">
-            <img src={figma} alt="figma" className="img" />
+            <i className="devicon-firebase-plain"></i>
+            <span className="name">FireBase</span>
+          </div>
+          <div className="skillCell">
+            {/* <img src={figma} alt="figma" className="img" /> */}
+            <i className="devicon-figma-plain"></i>
+            <span className="name">Figma</span>
           </div>
         </div>
       </Flip>

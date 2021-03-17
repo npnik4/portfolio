@@ -17,3 +17,14 @@ export const rise = {
     "These are actual screens from the app, designed and developed by me. Sadly, I had to stop development on this app, since I could not set alarms on IOS and Android. Mobile app developers just don’t have access to the systems alarm.",
   ],
 };
+
+export const instaCook = {
+    headline:
+      "24-Hour Hackathon, November 2019, Role: Front-end developer, Front-end: React-native, Back-end: Flask, various api's",
+    description: [
+      "Wasting your food cause you don't know what or how to cook? Use our app! Our proprietary AI algorithm will take your unused ingredients and generate new recipes for you to whip-up!",
+      "We provide a simple and easy service where you give InstaCook ingredients you have on hand and it will generate fun recipes to cook anything.",
+      "Using our mobile app's image recognition feature, simply take a picture of your fridge or pantry to capture and add items to your ingredients list."
+    ],
+};
+
