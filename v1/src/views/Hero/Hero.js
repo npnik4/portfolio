@@ -5,13 +5,13 @@ import purple from "../../assets/Purple.svg";
 import blue from "../../assets/Blue.svg";
 import red from "../../assets/Red.svg";
 import orange from "../../assets/Orange.svg";
-import grey from "../../assets/Grey.svg";
-// import HeroImage from '../../components/HeroImage/HeroImage';
 import { Button, Container } from "@material-ui/core";
 import Fade from "react-reveal/Fade";
 import hero from '../../assets/HeroImage.svg';
+import heroDark from '../../assets/HeroImageDark.svg';
+import { HeroHeading, TextHighlight, HeroSubText } from '../../components/Styled/StyledComponents';
 
-function Hero() {
+function Hero(props) {
   const contact = () => {
     window.location.href = "#work";
   };
@@ -25,10 +25,10 @@ function Hero() {
       <div className="text-container">
         <Fade left delay={700}>
           <div className="text">
-            <h1 className="name">
-              Hi, I'm <span className="color">Nikhil</span>.
-            </h1>
-            <p className="additional">I build tools for the web.</p>
+            <HeroHeading>
+              Hi, I'm <TextHighlight>Nikhil</TextHighlight>.
+            </HeroHeading>
+            <HeroSubText>I build tools for the web.</HeroSubText>
           </div>
           <div className="button">
             <Button
@@ -45,7 +45,7 @@ function Hero() {
       </div>
       <div className="image">
         <Fade right delay={700}>
-          <img src={hero} alt="hero"/>
+          <img src={props.theme === 'light' ? hero: heroDark} alt="hero"/>
         </Fade>
       </div>
       </Container>
@@ -53,7 +53,7 @@ function Hero() {
       <img src={blue} alt="shape" className="blue " />
       <img src={red} alt="shape" className="red " />
       <img src={orange} alt="shape" className="orange " />
-      <img src={grey} alt="shape" className="grey " />
+      {/* <img src={grey} alt="shape" className="grey " /> */}
     </div>
   );
 }

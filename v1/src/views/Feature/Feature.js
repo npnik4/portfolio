@@ -9,6 +9,7 @@ import Card from "../../components/Grid/Card";
 import "./Feature.scss";
 import Carousel from "../../components/Carousel/Carousel";
 import {urRecalls, scanavert} from './data';
+import {Title, TextHighlight} from '../../components/Styled/StyledComponents';
 
 function Feature() {
   const [active, setActive] = useState([false, false]);
@@ -31,9 +32,9 @@ function Feature() {
 
   return (
     <Container maxWidth="lg" className="feature" id="feature">
-      <h1 className="title">
-        Featured <span>Projects</span>.
-      </h1>
+      <Title>
+        Featured <TextHighlight>Projects</TextHighlight>.
+      </Title>
       <div className="item-container" id="featureWork">
         <div className="item">
           <Card

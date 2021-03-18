@@ -25,7 +25,7 @@
   .scroll::before {
     animation: bounce 1s ease infinite;
     bottom: 2rem;
-    color: rgb(15, 15, 15);
+    color: rgb(148, 148, 148);
     content: "╲╱";
     font-size: 2rem;
     height: 4rem;
@@ -66,27 +66,27 @@
 
     .text {
       padding: 1em 5em;
-      p {
-        font-size: 5em;
-        font-weight: 600;
-        margin: 0;
-        padding: 0;
-        line-height: 0.7em;
-      }
-      .name {
-        font-size: 5em;
-        font-weight: 600;
-        margin: 0;
-      }
-      .color {
-        color: #4f05ff; //#00b8f0;
-      }
-      .additional {
-        font-size: 2em;
-        color: rgb(32, 32, 32);
-        line-height: 1em;
-        padding-left: 5px;
-      }
+      // p {
+      //   font-size: 5em;
+      //   font-weight: 600;
+      //   margin: 0;
+      //   padding: 0;
+      //   line-height: 0.7em;
+      // }
+      // .name {
+      //   font-size: 5em;
+      //   font-weight: 600;
+      //   margin: 0;
+      // }
+      // .color {
+      //   color: #4f05ff;
+      // }
+      // .additional {
+      //   font-size: 2em;
+      //   color: rgb(32, 32, 32);
+      //   line-height: 1em;
+      //   padding-left: 5px;
+      // }
     }
 
     .button {
@@ -239,21 +239,21 @@
     }
   }
 
-  @media screen and (max-width: 1200px) { 
-    .text-container {
-      .text {
-        p {
-          font-size: 3.5em;
-        }
-        .name {
-          font-size: 3.5em;
-        }
-        .additional {
-          font-size: 1.5em;
-        }
-      }
-    }
-  }
+  // @media screen and (max-width: 1200px) { 
+  //   .text-container {
+  //     .text {
+  //       // p {
+  //       //   font-size: 3.5em;
+  //       // }
+  //       // .name {
+  //       //   font-size: 3.5em;
+  //       // }
+  //       // .additional {
+  //       //   font-size: 1.5em;
+  //       // }
+  //     }
+  //   }
+  // }
 
   @media screen and (max-width: 960px) {
     .purple {
@@ -318,16 +318,16 @@
       width: 100%;
       .text {
         padding: 0 3em;
-        p {
-          font-size: 5em;
-        }
-        .name {
-          font-size: 5em;
-        }
-        .additional {
-          font-size: 2em;
-          padding-left: 1px;
-        }
+        // p {
+        //   font-size: 5em;
+        // }
+        // .name {
+        //   font-size: 5em;
+        // }
+        // .additional {
+        //   font-size: 2em;
+        //   padding-left: 1px;
+        // }
       }
       .button {
         padding: 1em 3em;
@@ -345,15 +345,15 @@
     .text-container {
       .text {
         padding: 0 1em;
-        p {
-          font-size: 3.2em;
-        }
-        .name {
-          font-size: 3.2em;
-        }
-        .additional {
-          font-size: 1.5em;
-        }
+        // p {
+        //   font-size: 3.2em;
+        // }
+        // .name {
+        //   font-size: 3.2em;
+        // }
+        // .additional {
+        //   font-size: 1.5em;
+        // }
       }
       .button {
         padding: 1em 1em;
@@ -362,3 +362,5 @@
     }
   }
 }
+
+

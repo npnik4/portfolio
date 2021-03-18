@@ -5,8 +5,9 @@ import "./NavBar.scss";
 import logo from "../../assets/logo2.svg";
 import { Button } from "@material-ui/core";
 import res from '../../assets/docs/Nikhil_Resume.pdf';
+import {NavLink, Icon} from '../Styled/StyledComponents';
 
-function Navbar() {
+function Navbar(props) {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   const [isVisible, setVisible] = useState(true);
@@ -48,34 +49,39 @@ function Navbar() {
           <img src={logo} alt="logo" className="img" />
         </a>
         <div className="menu-icon" onClick={handleClick}>
-          <i className={click ? "fas fa-times" : "fas fa-bars"} />
+          <Icon className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
-            <a href="#about" className="nav-links" onClick={closeMobileMenu}>
+            <NavLink href="#about" onClick={closeMobileMenu}>
               About
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a href="#skills" className="nav-links" onClick={closeMobileMenu}>
+            <NavLink href="#skills" className="nav-links" onClick={closeMobileMenu}>
               Skills
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a href="#work" className="nav-links" onClick={closeMobileMenu}>
+            <NavLink href="#work" className="nav-links" onClick={closeMobileMenu}>
               Work
-            </a>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <a href="mailto:npnik4@gmail.com" className="nav-links" onClick={closeMobileMenu}>
+            <NavLink href="mailto:npnik4@gmail.com" className="nav-links" onClick={closeMobileMenu}>
               Contact
-            </a>
+            </NavLink>
           </li>
           <li className="menu-button">
             <a href="/" className="nav-links-mobile" onClick={() => resume()}>
               Resume
             </a>
           </li>
+          {/* <li className="menu-button">
+            <div className="nav-links-mobile">
+              {props.children}
+            </div>
+          </li> */}
         </ul>
         {button && (
           <Button
@@ -88,6 +94,10 @@ function Navbar() {
             Resume
           </Button>
         )}
+        { (process.env.NODE_ENV !== "production") ? button && props.children ? 
+          props.children :
+          null
+        : null}
       </div>
     </nav>
   );

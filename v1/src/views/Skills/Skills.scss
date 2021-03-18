@@ -38,23 +38,6 @@
       background-color: transparent !important;
     }
 
-    i {
-      font-size: 5em;
-      color: black;
-      transition: 0.2s ease-in-out;
-      opacity: 0.75;
-      background-color: transparent !important;
-    }
-
-    i:hover {
-      font-size: 5.5em;
-      opacity: 1;
-    }
-
-    .name {
-      font-size: 1em;
-    }
-
     .img {
       height: 5em;
       width: 5em;
@@ -86,17 +69,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-      }
-      i {
-        font-size: 4em;
-      }
-      i:hover {
-        font-size: 4.5em;
-        opacity: 1;
-      }
-
-      .name {
-        font-size: 0.8em;
       }
 
       .img {
@@ -139,16 +111,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-      }
-      i {
-        font-size: 2.5em;
-      }
-      i:hover {
-        font-size: 3em;
-        opacity: 1;
-      }
-      .name {
-        font-size: 0.5em;
       }
 
       .img {

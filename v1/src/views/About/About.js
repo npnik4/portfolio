@@ -7,48 +7,49 @@ import Fade from "react-reveal/Fade";
 import orange from "../../assets/DarkOrange.svg";
 import aqua from "../../assets/Aqua.svg";
 import blue from "../../assets/BabyBlue.svg";
+import {Title, TextHighlight, P3, A3, ListItem, AboutText, List, Card} from '../../components/Styled/StyledComponents';
 
 function About() {
   return (
     <Container maxWidth="lg" className="about" id="about">
-      <h1 className="heading">
-        <span>About</span> me.
-      </h1>
+      <Title>
+        <TextHighlight>About</TextHighlight> me.
+      </Title>
       <Fade left duration={500}>
-        <div className="card">
-          <div className="about-text">
-            <p>I'm Nikhil, a software developer based in NJ.</p>
-            <p>
+        <Card>
+          <AboutText>
+            <P3>I'm Nikhil, a software developer based in NJ.</P3>
+            <P3>
               My mission is to create life enhancing tools that actually make a
               great impact, whether that be websites, applications, or anything
               in between.
-            </p>
-            <p>
+            </P3>
+            <P3>
               BS in Computer Science & Engineering Technology from{" "}
-              <a target="_blank" href="https://www.njit.edu/">
+              <A3 target="_blank" href="https://www.njit.edu/">
                 New Jersey Institute of Technology
-              </a>
+              </A3>
               . Currently working at{" "}
-              <a target="_blank" href="https://www.adp.com/">
+              <A3 target="_blank" href="https://www.adp.com/">
                 ADP
-              </a>{" "}
+              </A3>{" "}
               as an Application Developer, building out next-gen payroll
               solutions.
-            </p>
-            <p>Here are a few technologies I've been working with recently:</p>
-            <ul className="skills">
-              <li>JavaScript (ES6+)</li>
-              <li>TypeScript </li>
-              <li>React & Redux</li>
-              <li>HTML & CSS / SCSS</li>
-              <li>Java</li>
-              <li>Node.js</li>
-            </ul>
-          </div>
+            </P3>
+            <P3>Here are a few technologies I've been working with recently:</P3>
+            <List>
+              <ListItem>JavaScript (ES6+)</ListItem>
+              <ListItem>TypeScript </ListItem>
+              <ListItem>React & Redux</ListItem>
+              <ListItem>HTML & CSS / SCSS</ListItem>
+              <ListItem>Java</ListItem>
+              <ListItem>Node.js</ListItem>
+            </List>
+          </AboutText>
           <div className="about-image">
             <PhotoCard />
           </div>
-        </div>
+        </Card>
       </Fade>
       <img src={orange} alt="shape" className="orange" />
       <img src={aqua} alt="shape" className="aqua" />

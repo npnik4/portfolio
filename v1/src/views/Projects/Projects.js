@@ -3,6 +3,7 @@ import { Container } from "@material-ui/core";
 import React, { useState } from "react";
 import "./Projects.scss";
 import Card from "../../components/Grid/Card";
+import {Title, TextHighlight} from '../../components/Styled/StyledComponents';
 import rl from "../../assets/rl.svg";
 import Parallax from "../../assets/parallax/motivation";
 import Carousel from "../../components/Carousel/Carousel";
@@ -54,9 +55,9 @@ function Projects() {
 
   return (
     <Container maxWidth="lg" className="projects" id="work">
-      <h1 className="title">
-        My <span>Work</span>.
-      </h1>
+      <Title>
+        My <TextHighlight>Work</TextHighlight>.
+      </Title>
       <div className="work-grid" id="gridStart">
         <div className="work1" id="0">
           <Card

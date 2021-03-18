@@ -1,4 +1,4 @@
-import "./App.scss";
+// import "./App.scss";
 import React, { useState, useEffect } from "react";
 import Preloader from "./components/Preloader/Preloader";
 import Navbar from "./components/NavBar/NavBar";
@@ -9,6 +9,10 @@ import Projects from "./views/Projects/Projects";
 import Feature from "./views/Feature/Feature";
 import Footer from "./views/Footer/Footer";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider as StyledThemeProvider } from "styled-components";
+import { GlobalStyles } from "./global";
+import { lightTheme, darkTheme } from "./theme";
+import { ThemeToggle } from "./components/Styled/StyledComponents";
 
 function App() {
   const theme = createMuiTheme({
@@ -40,6 +44,15 @@ function App() {
   });
 
   const [loading, setLoading] = useState(false);
+  const [styledTheme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    if (styledTheme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -50,19 +63,28 @@ function App() {
 
   return (
     <>
-      {loading ? (
-        <Preloader loading={loading} />
-      ) : (
-        <ThemeProvider theme={theme}>
-          <Navbar />
-          <Hero />
-          <Feature />
-          <About />
-          <Skills />
-          <Projects />
-          <Footer />
-        </ThemeProvider>
-      )}
+      <StyledThemeProvider
+        theme={styledTheme === "light" ? lightTheme : darkTheme}
+      >
+        <GlobalStyles />
+        {loading ? (
+          <Preloader loading={loading} />
+        ) : (
+          <ThemeProvider theme={theme}>
+            <Navbar>
+              <ThemeToggle onClick={toggleTheme}>
+                <i className="fas fa-lightbulb"></i>
+              </ThemeToggle>
+            </Navbar>
+            <Hero theme={styledTheme} />
+            <Feature theme={styledTheme} />
+            <About />
+            <Skills theme={styledTheme} />
+            <Projects theme={styledTheme} />
+            <Footer />
+          </ThemeProvider>
+        )}
+      </StyledThemeProvider>
     </>
   );
 }

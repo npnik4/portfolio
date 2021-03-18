@@ -1,106 +1,104 @@
 import { Container } from "@material-ui/core";
 import React from "react";
 import "./Skills.scss";
-// import redux from "../../assets/Redux.svg";
-// import jenkins from "../../assets/Jenkins.svg";
-// import figma from "../../assets/Figma.svg";
 import Flip from "react-reveal/Flip";
 import Pulse from "react-reveal/Pulse";
 import deepRed from "../../assets/DeepRed.svg";
 import barney from "../../assets/barney.svg";
+import {Title, TextHighlight, SkillIcon, SkillName} from '../../components/Styled/StyledComponents';
 
 function Skills() {
   return (
     <Container maxWidth="lg" className="skillContainer" id="skills">
       <div className="row">
         <Pulse>
-          <div className="heading">
-            <span>Skills</span> I've picked up along the way.
-          </div>
+          <Title>
+            <TextHighlight>Skills</TextHighlight> I've picked up along the way.
+          </Title>
         </Pulse>
       </div>
       <Flip bottom>
         <div className="row">
           <div className="skillCell">
-            <i className="devicon-javascript-plain"></i>
-            <span className="name">JavaScript</span>
+            <SkillIcon className="devicon-javascript-plain"></SkillIcon>
+            <SkillName>JavaScript</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-typescript-plain"></i>
-            <span className="name">TypeScript</span>
+            <SkillIcon className="devicon-typescript-plain"></SkillIcon>
+            <SkillName>TypeScript</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-java-plain"></i>
-            <span className="name">Java</span>
+            <SkillIcon className="devicon-java-plain"></SkillIcon>
+            <SkillName>Java</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-python-plain"></i>
-            <span className="name">Python</span>
+            <SkillIcon className="devicon-python-plain"></SkillIcon>
+            <SkillName>Python</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-html5-plain"></i>
-            <span className="name">HTML5</span>
+            <SkillIcon className="devicon-html5-plain"></SkillIcon>
+            <SkillName>HTML5</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-css3-plain"></i>
-            <span className="name">CSS3</span>
+            <SkillIcon className="devicon-css3-plain"></SkillIcon>
+            <SkillName>CSS3</SkillName>
           </div>
         </div>
       </Flip>
       <Flip bottom delay={300}>
         <div className="row">
           <div className="skillCell">
-            <i className="devicon-sass-original"></i>
-            <span className="name">SASS</span>
+            <SkillIcon className="devicon-sass-original"></SkillIcon>
+            <SkillName>SASS</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-react-original"></i>
-            <span className="name">React.js</span>
+            <SkillIcon className="devicon-react-original"></SkillIcon>
+            <SkillName>React.js</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-redux-original"></i>
-            <span className="name">Redux</span>
+            <SkillIcon className="devicon-redux-original"></SkillIcon>
+            <SkillName>Redux</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-django-plain"></i>
-            <span className="name">Django Rest</span>
+            <SkillIcon className="devicon-django-plain"></SkillIcon>
+            <SkillName>Django Rest</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-nodejs-plain"></i>
-            <span className="name">Node.js</span>
+            <SkillIcon className="devicon-nodejs-plain"></SkillIcon>
+            <SkillName>Node.js</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-github-original"></i>
-            <span className="name">Github</span>
+            <SkillIcon className="devicon-github-original"></SkillIcon>
+            <SkillName>Github</SkillName>
           </div>
         </div>
       </Flip>
       <Flip bottom delay={600}>
         <div className="row">
           <div className="skillCell">
-            <i className="devicon-bitbucket-original"></i>
-            <span className="name">BitBucket</span>
+            <SkillIcon className="devicon-bitbucket-original"></SkillIcon>
+            <SkillName>BitBucket</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-jenkins-line"></i>
-            <span className="name">Jenkins</span>
+            <SkillIcon className="devicon-jenkins-line"></SkillIcon>
+            <SkillName>Jenkins</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-confluence-original"></i>
-            <span className="name">Confluence</span>
+            <SkillIcon className="devicon-confluence-original"></SkillIcon>
+            <SkillName>Confluence</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-amazonwebservices-plain"></i>
-            <span className="name">AWS</span>
+            <SkillIcon className="devicon-amazonwebservices-plain"></SkillIcon>
+            <SkillName>AWS</SkillName>
           </div>
           <div className="skillCell">
-            <i className="devicon-firebase-plain"></i>
-            <span className="name">FireBase</span>
+            <SkillIcon className="devicon-firebase-plain"></SkillIcon>
+            <SkillName>FireBase</SkillName>
           </div>
           <div className="skillCell">
             {/* <img src={figma} alt="figma" className="img" /> */}
-            <i className="devicon-figma-plain"></i>
-            <span className="name">Figma</span>
+            <SkillIcon className="devicon-figma-plain"></SkillIcon>
+            <SkillName>Figma</SkillName>
           </div>
         </div>
       </Flip>
