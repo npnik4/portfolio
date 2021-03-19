@@ -37,7 +37,7 @@ function Carousel(props) {
       <div className="content">
         <img
           src={props.images[currentImg]}
-          alt="urrecalls"
+          alt="screens"
           style={props.styles ? props.styles[currentImg] : imageStyles}
           className="photo"
         />

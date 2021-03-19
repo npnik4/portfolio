@@ -81,7 +81,7 @@ function App() {
           <Preloader loading={loading} />
         ) : (
           <ThemeProvider theme={styledTheme === "light" ? lightMaterialTheme : darkMaterialTheme}>
-            <Navbar>
+            <Navbar theme={styledTheme} toggle={toggleTheme}>
               <ThemeToggle onClick={toggleTheme}>
                 <i className="fas fa-lightbulb"></i>
               </ThemeToggle>

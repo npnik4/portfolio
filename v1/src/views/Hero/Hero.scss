@@ -96,7 +96,7 @@
       filter: blur(150px) brightness(1.5);
     }
     &.dark {
-      filter: blur(150px) brightness(0.7);
+      filter: blur(170px) brightness(0.7);
     }
   }
   .blue {
@@ -113,7 +113,7 @@
       filter: blur(120px) brightness(1.2);
     }
     &.dark {
-      filter: blur(120px) brightness(0.7);
+      filter: blur(150px) brightness(0.7);
     }
   }
   .red {
@@ -130,7 +130,7 @@
       filter: blur(150px) brightness(1.5);
     }
     &.dark {
-      filter: blur(150px) brightness(0.7);
+      filter: blur(170px) brightness(0.7);
     }
   }
   .orange {
@@ -144,10 +144,10 @@
     padding:0;
     animation: explodeOrange 1s forwards;
     &.light {
-      filter: blur(170px);
+      filter: blur(200px);
     }
     &.dark {
-      filter: blur(170px) brightness(0.7);
+      filter: blur(200px) brightness(0.6);
     }
   }
   .grey {

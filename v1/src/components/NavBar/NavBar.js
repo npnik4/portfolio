@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import "./NavBar.scss";
 import logo from "../../assets/logo2.svg";
+import logoDark from  '../../assets/logoDark.svg';
 import { Button } from "@material-ui/core";
 import res from '../../assets/docs/Nikhil_Resume.pdf';
 import {NavLink, Icon} from '../Styled/StyledComponents';
@@ -46,12 +47,12 @@ function Navbar(props) {
     <nav className="navbar" id="navbar" style={{top: isVisible ? '0' : '-100px'}}>
       <div className="navbar-container">
         <a href="#" className="navbar-logo" onClick={closeMobileMenu}>
-          <img src={logo} alt="logo" className="img" />
+          <img src={props.theme === 'light' ? logo : logoDark} alt="logo" className="img" />
         </a>
         <div className="menu-icon" onClick={handleClick}>
           <Icon className={click ? "fas fa-times" : "fas fa-bars"} />
         </div>
-        <ul className={click ? "nav-menu active" : "nav-menu"}>
+        <ul className={click ? (props.theme === 'light' ? "nav-menu active" : "nav-menu active-dark") : "nav-menu"}>
           <li className="nav-item">
             <NavLink href="#about" onClick={closeMobileMenu}>
               About
@@ -73,15 +74,15 @@ function Navbar(props) {
             </NavLink>
           </li>
           <li className="menu-button">
-            <a href="/" className="nav-links-mobile" onClick={() => resume()}>
+            <a href="/" className={props.theme === 'light' ? "nav-links-mobile" : "nav-links-mobile-dark"} onClick={() => resume()}>
               Resume
             </a>
           </li>
-          {/* <li className="menu-button">
-            <div className="nav-links-mobile">
+          <li className="menu-button">
+            <div className={"nav-links-mobile-theme"}>
               {props.children}
             </div>
-          </li> */}
+          </li>
         </ul>
         {button && (
           <Button
