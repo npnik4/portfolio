@@ -49,10 +49,10 @@ function Hero(props) {
         </Fade>
       </div>
       </Container>
-      <img src={purple} alt="shape" className="purple " />
-      <img src={blue} alt="shape" className="blue " />
-      <img src={red} alt="shape" className="red " />
-      <img src={orange} alt="shape" className="orange " />
+      <img src={purple} alt="shape" className={"purple " + (props.theme === 'light' ? "light" : "dark")} />
+      <img src={blue} alt="shape" className={"blue " + (props.theme === 'light' ? "light" : "dark")} />
+      <img src={red} alt="shape" className={"red " + (props.theme === 'light' ? "light" : "dark")} />
+      <img src={orange} alt="shape" className={"orange " + (props.theme === 'light' ? "light" : "dark")} />
       {/* <img src={grey} alt="shape" className="grey " /> */}
     </div>
   );

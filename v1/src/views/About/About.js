@@ -9,7 +9,7 @@ import aqua from "../../assets/Aqua.svg";
 import blue from "../../assets/BabyBlue.svg";
 import {Title, TextHighlight, P3, A3, ListItem, AboutText, List, Card} from '../../components/Styled/StyledComponents';
 
-function About() {
+function About(props) {
   return (
     <Container maxWidth="lg" className="about" id="about">
       <Title>
@@ -19,11 +19,11 @@ function About() {
         <Card>
           <AboutText>
             <P3>I'm Nikhil, a software developer based in NJ.</P3>
-            <P3>
+            {/* <P3>
               My mission is to create life enhancing tools that actually make a
               great impact, whether that be websites, applications, or anything
               in between.
-            </P3>
+            </P3> */}
             <P3>
               BS in Computer Science & Engineering Technology from{" "}
               <A3 target="_blank" href="https://www.njit.edu/">
@@ -47,7 +47,7 @@ function About() {
             </List>
           </AboutText>
           <div className="about-image">
-            <PhotoCard />
+            <PhotoCard theme={props.theme}/>
           </div>
         </Card>
       </Fade>

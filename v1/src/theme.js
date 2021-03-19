@@ -8,8 +8,8 @@ export const lightTheme = {
 
 export const darkTheme = {
   body: "#000",
-  text: "#fff",
-  button: "#4f05ff",
+  text: "#e8e8e8",
+  button: "#5e97ff",
   card:
     "linear-gradient( 109.26deg, rgb(58 58 58 / 56%) 0%, rgb(117 117 117 / 13%) 100.54% )",
 };

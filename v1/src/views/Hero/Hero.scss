@@ -66,27 +66,6 @@
 
     .text {
       padding: 1em 5em;
-      // p {
-      //   font-size: 5em;
-      //   font-weight: 600;
-      //   margin: 0;
-      //   padding: 0;
-      //   line-height: 0.7em;
-      // }
-      // .name {
-      //   font-size: 5em;
-      //   font-weight: 600;
-      //   margin: 0;
-      // }
-      // .color {
-      //   color: #4f05ff;
-      // }
-      // .additional {
-      //   font-size: 2em;
-      //   color: rgb(32, 32, 32);
-      //   line-height: 1em;
-      //   padding-left: 5px;
-      // }
     }
 
     .button {
@@ -105,12 +84,7 @@
   }
 
   .purple {
-    // position: absolute;
-    // top: 55vh;
-    // left: -50px;
-    // width: 45%;
     z-index: -1;
-    filter: blur(150px) brightness(1.5);
     overflow: hidden;
     position:absolute;
     top:30%;
@@ -118,15 +92,14 @@
     width:0;
     padding:0;
     animation: explodePurple 1s forwards;
+    &.light {
+      filter: blur(150px) brightness(1.5);
+    }
+    &.dark {
+      filter: blur(150px) brightness(0.7);
+    }
   }
   .blue {
-    // position: absolute;
-    // z-index: -1;
-    // top: -150px;
-    // right: -10px;
-    // filter: blur(120px) brightness(1.2);
-    // width: 45%;
-    // overflow: hidden;
     z-index: -1;
     filter: blur(120px) brightness(1.2);
     overflow: hidden;
@@ -136,15 +109,14 @@
     width:0;
     padding:0;
     animation: explodeBlue 1s forwards;
+    &.light {
+      filter: blur(120px) brightness(1.2);
+    }
+    &.dark {
+      filter: blur(120px) brightness(0.7);
+    }
   }
   .red {
-    // position: absolute;
-    // z-index: -1;
-    // top: 55vh;
-    // right: 0px;
-    // filter: blur(150px) brightness(1.5);
-    // width: 40%;
-    // overflow: hidden;
     z-index: -1;
     filter: blur(150px) brightness(1.5);
     overflow: hidden;
@@ -154,15 +126,14 @@
     width:0;
     padding:0;
     animation: explodeRed 1s forwards;
+    &.light {
+      filter: blur(150px) brightness(1.5);
+    }
+    &.dark {
+      filter: blur(150px) brightness(0.7);
+    }
   }
   .orange {
-    // position: absolute;
-    // z-index: -2;
-    // top: -220px;
-    // left: -100px;
-    // filter: blur(170px);
-    // width: 40%;
-    // overflow: hidden;
     z-index: -2;
     filter: blur(170px);
     overflow: hidden;
@@ -172,6 +143,12 @@
     width:0;
     padding:0;
     animation: explodeOrange 1s forwards;
+    &.light {
+      filter: blur(170px);
+    }
+    &.dark {
+      filter: blur(170px) brightness(0.7);
+    }
   }
   .grey {
     position: absolute;
@@ -181,6 +158,12 @@
     filter: blur(120px) brightness(1.2);
     width: 40%;
     overflow: hidden;
+    &.light {
+      filter: blur(150px) brightness(1.5);
+    }
+    &.dark {
+      filter: blur(150px) brightness(1);
+    }
   }
 
   @keyframes explodePurple {
@@ -238,22 +221,6 @@
       }
     }
   }
-
-  // @media screen and (max-width: 1200px) { 
-  //   .text-container {
-  //     .text {
-  //       // p {
-  //       //   font-size: 3.5em;
-  //       // }
-  //       // .name {
-  //       //   font-size: 3.5em;
-  //       // }
-  //       // .additional {
-  //       //   font-size: 1.5em;
-  //       // }
-  //     }
-  //   }
-  // }
 
   @media screen and (max-width: 960px) {
     .purple {
@@ -318,20 +285,9 @@
       width: 100%;
       .text {
         padding: 0 3em;
-        // p {
-        //   font-size: 5em;
-        // }
-        // .name {
-        //   font-size: 5em;
-        // }
-        // .additional {
-        //   font-size: 2em;
-        //   padding-left: 1px;
-        // }
       }
       .button {
         padding: 1em 3em;
-        // width: 60%;
       }
     }
 
@@ -345,15 +301,6 @@
     .text-container {
       .text {
         padding: 0 1em;
-        // p {
-        //   font-size: 3.2em;
-        // }
-        // .name {
-        //   font-size: 3.2em;
-        // }
-        // .additional {
-        //   font-size: 1.5em;
-        // }
       }
       .button {
         padding: 1em 1em;
