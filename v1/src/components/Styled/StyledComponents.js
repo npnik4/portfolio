@@ -86,7 +86,7 @@ export const SkillIcon = styled.i`
   color: ${({ theme }) => theme.text};
   font-size: 5em;
   transition: 0.2s ease-in-out;
-  opacity: 0.75;
+  opacity: 0.9;
   background-color: transparent !important;
   &:hover {
     font-size: 5.5em;
@@ -220,9 +220,9 @@ export const Card = styled.div`
 
 export const FooterContainer = styled.div`
   margin-top: 5em;
-  height: 200px;
+  height: 50px;
   background: ${({ theme }) => theme.card};
-  padding: 3em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

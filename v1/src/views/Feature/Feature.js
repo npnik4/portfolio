@@ -11,7 +11,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import {urRecalls, scanavert} from './data';
 import {Title, TextHighlight} from '../../components/Styled/StyledComponents';
 
-function Feature() {
+function Feature(props) {
   const [active, setActive] = useState([false, false]);
 
   const toggle = (index) => {
@@ -30,6 +30,8 @@ function Feature() {
     setActive(newActive);
   };
 
+  const light = props.theme === 'light';
+
   return (
     <Container maxWidth="lg" className="feature" id="feature">
       <Title>
@@ -41,7 +43,7 @@ function Feature() {
             toggle={() => toggle(0)}
             name="UrRecalls"
             description={urRecalls.headline}
-            css="linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)" //linear-gradient(to top, rgb(228 178 156) 0%, rgb(97 183 224) 100%)
+            css={light ? "linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)" : "linear-gradient(to top, rgb(228 178 156) 0%, rgb(97 183 224) 100%)"} //linear-gradient(to top, rgb(228 178 156) 0%, rgb(97 183 224) 100%)
             active={active[0]}
             link="https://npnik4.github.io/assets/docs/UrRecalls.pdf"
           >
@@ -53,7 +55,7 @@ function Feature() {
             toggle={() => toggle(1)}
             name="SCANAVERT"
             description={scanavert.headline}
-            css="linear-gradient(120deg, #f6d365 0%, #fda085 100%)" //linear-gradient(120deg, rgb(212 178 74) 0%, rgb(197 114 89) 100%)
+            css={light ? "linear-gradient(120deg, #f6d365 0%, #fda085 100%)" : "linear-gradient(120deg, rgb(212 178 74) 0%, rgb(197 114 89) 100%)"} //linear-gradient(120deg, rgb(212 178 74) 0%, rgb(197 114 89) 100%)
             active={active[1]}
             link="https://npnik4.github.io/assets/docs/Scan%20Avert.pdf"
           >
