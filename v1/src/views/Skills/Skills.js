@@ -5,7 +5,13 @@ import Flip from "react-reveal/Flip";
 import Pulse from "react-reveal/Pulse";
 import deepRed from "../../assets/DeepRed.svg";
 import barney from "../../assets/barney.svg";
-import {Title, TextHighlight, SkillIcon, SkillName} from '../../components/Styled/StyledComponents';
+import {
+  Title,
+  TextHighlight,
+  SkillIcon,
+  SkillName,
+} from "../../components/Styled/StyledComponents";
+import { isSafari, isMobileSafari } from "react-device-detect";
 
 function Skills() {
   return (
@@ -102,8 +108,12 @@ function Skills() {
           </div>
         </div>
       </Flip>
-      <img src={deepRed} alt="shape" className="deepRed" />
-      <img src={barney} alt="shape" className="barney" />
+      {!isSafari && !isMobileSafari ? (
+        <>
+          <img src={deepRed} alt="shape" className="deepRed" />
+          <img src={barney} alt="shape" className="barney" />
+        </>
+      ) : null}
     </Container>
   );
 }

@@ -7,7 +7,17 @@ import Fade from "react-reveal/Fade";
 import orange from "../../assets/DarkOrange.svg";
 import aqua from "../../assets/Aqua.svg";
 import blue from "../../assets/BabyBlue.svg";
-import {Title, TextHighlight, P3, A3, ListItem, AboutText, List, Card} from '../../components/Styled/StyledComponents';
+import {
+  Title,
+  TextHighlight,
+  P3,
+  A3,
+  ListItem,
+  AboutText,
+  List,
+  Card,
+} from "../../components/Styled/StyledComponents";
+import { isMobile, isSafari, isMobileSafari } from "react-device-detect";
 
 function About(props) {
   return (
@@ -36,7 +46,9 @@ function About(props) {
               as an Application Developer, building out next-gen payroll
               solutions.
             </P3>
-            <P3>Here are a few technologies I've been working with recently:</P3>
+            <P3>
+              Here are a few technologies I've been working with recently:
+            </P3>
             <List>
               <ListItem>JavaScript (ES6+)</ListItem>
               <ListItem>TypeScript </ListItem>
@@ -46,14 +58,20 @@ function About(props) {
               <ListItem>Node.js</ListItem>
             </List>
           </AboutText>
-          <div className="about-image">
-            <PhotoCard theme={props.theme}/>
-          </div>
+          {!isMobile ? (
+            <div className="about-image">
+              <PhotoCard theme={props.theme} />
+            </div>
+          ) : null}
         </Card>
       </Fade>
-      <img src={orange} alt="shape" className="orange" />
-      <img src={aqua} alt="shape" className="aqua" />
-      <img src={blue} alt="shape" className="blue" />
+      {!isSafari && !isMobileSafari ? (
+        <>
+          <img src={orange} alt="shape" className="orange" />
+          <img src={aqua} alt="shape" className="aqua" />
+          <img src={blue} alt="shape" className="blue" />
+        </>
+      ) : null}
     </Container>
   );
 }

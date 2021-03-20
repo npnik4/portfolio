@@ -1,18 +1,15 @@
 import styled from "styled-components";
 
 export const ThemeToggle = styled.div`
-  background: ${({ theme }) => theme.body};
   color: ${({ theme }) => theme.text};
   transition: all 0.25s linear;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  box-shadow: 0px 0px 4px rgb(0 0 0 / 15%);
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0px 0 20px;
-  opacity: 0.75;
   cursor: pointer;
 `;
 
@@ -209,8 +206,8 @@ export const Card = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 800px;
-    width: 80%;
+    min-height: 500px;
+    width: 85%;
   }
   @media screen and (max-width: 660px) {
     width: 90%;

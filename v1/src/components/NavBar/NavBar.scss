@@ -2,7 +2,7 @@ $height: 100px;
 
 .navbar {
   width: 100%;
-  backdrop-filter: blur(20px);
+  // backdrop-filter: blur(20px);
   filter: none !important;
   height: $height;
   display: flex;
@@ -237,6 +237,7 @@ $height: 100px;
     transition: all 0.3s ease-out;
     div {
       margin: 0 !important;
+      font-size: 2em;
     }
   }
 

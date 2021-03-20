@@ -101,7 +101,6 @@
   }
   .blue {
     z-index: -1;
-    filter: blur(120px) brightness(1.2);
     overflow: hidden;
     position:absolute;
     top:30%;
@@ -118,7 +117,6 @@
   }
   .red {
     z-index: -1;
-    filter: blur(150px) brightness(1.5);
     overflow: hidden;
     position:absolute;
     top:30%;
@@ -135,7 +133,6 @@
   }
   .orange {
     z-index: -2;
-    filter: blur(170px);
     overflow: hidden;
     position:absolute;
     top:30%;
@@ -155,7 +152,6 @@
     z-index: -3;
     top: 25%;
     left: 35%;
-    filter: blur(120px) brightness(1.2);
     width: 40%;
     overflow: hidden;
     &.light {
