@@ -43,27 +43,27 @@
       position: absolute;
       z-index: -1;
       bottom: 0;
-      left: -100px;
-      filter: blur(150px);
-      width: 90%;
+      left: 100px;
+      filter: blur(120px);
+      width: 60%;
       overflow: hidden;
     }
     .hotPink {
       position: absolute;
       z-index: -1;
       bottom: 0;
-      left: 10%;
-      filter: blur(150px) brightness(1.5);
-      width: 90%;
+      left: 0px;
+      filter: blur(120px) brightness(1.5);
+      width: 60%;
       overflow: hidden;
     }
     .brightblue {
       position: absolute;
       z-index: -1;
       bottom: 0;
-      left: -200px;
-      filter: blur(150px);
-      width: 90%;
+      left: -100px;
+      filter: blur(120px);
+      width: 60%;
       overflow: hidden;
     }
   }
