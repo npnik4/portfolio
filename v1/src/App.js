@@ -13,8 +13,13 @@ import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import { GlobalStyles } from "./global";
 import { lightTheme, darkTheme } from "./theme";
 import { ThemeToggle } from "./components/Styled/StyledComponents";
+import { useDarkMode } from './useDarkMode';
 
 function App() {
+  const [theme, toggleTheme, componentMounted] = useDarkMode();
+
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
   const lightMaterialTheme = createMuiTheme({
     palette: {
       primary: {
@@ -54,15 +59,7 @@ function App() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [styledTheme, setTheme] = useState("light");
-
-  const toggleTheme = () => {
-    if (styledTheme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
+  // const [styledTheme, setTheme] = useState("light");
 
   useEffect(() => {
     setLoading(true);
@@ -71,26 +68,30 @@ function App() {
     }, 1500);
   }, []);
 
+  if (!componentMounted) {
+    return <div />
+  };
+
   return (
     <>
       <StyledThemeProvider
-        theme={styledTheme === "light" ? lightTheme : darkTheme}
+        theme={themeMode}
       >
         <GlobalStyles />
         {loading ? (
           <Preloader loading={loading} />
         ) : (
-          <ThemeProvider theme={styledTheme === "light" ? lightMaterialTheme : darkMaterialTheme}>
-            <Navbar theme={styledTheme} toggle={toggleTheme}>
+          <ThemeProvider theme={theme === "light" ? lightMaterialTheme : darkMaterialTheme}>
+            <Navbar theme={theme} toggle={toggleTheme}>
               <ThemeToggle onClick={toggleTheme}>
                 <i className="fas fa-lightbulb"></i>
               </ThemeToggle>
             </Navbar>
-            <Hero theme={styledTheme} />
-            <Feature theme={styledTheme} />
+            <Hero theme={theme} />
+            <Feature theme={theme} />
             <About />
-            <Skills theme={styledTheme} />
-            <Projects theme={styledTheme} />
+            <Skills theme={theme} />
+            <Projects theme={theme} />
             <Footer />
           </ThemeProvider>
         )}
