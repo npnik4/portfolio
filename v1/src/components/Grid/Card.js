@@ -9,7 +9,7 @@ function Card(props) {
 
   return (
     <AnimateSharedLayout>
-      <motion.div
+      <div
         className={active ? "expandedCell" : "cell"}
         style={{ backgroundImage: css, cursor: !active ? "pointer" : "auto" }}
         onClick={!active ? toggle : undefined}
@@ -46,10 +46,10 @@ function Card(props) {
           delay={active ? 0 : 400}
         >
           <motion.div className="default">
-            <div style={{ zIndex: 1, textAlign: "center", lineHeight: "1em" }}>{name}</div>
+            <div className="default-content">{name}</div>
           </motion.div>
         </Fade>
-      </motion.div>
+      </div>
     </AnimateSharedLayout>
   );
 }

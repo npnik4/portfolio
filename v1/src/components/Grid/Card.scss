@@ -40,6 +40,12 @@
   justify-content: center;
   padding: 20px;
   font-size: 2em;
+
+  .default-content {
+    z-index: 1;
+    text-align: center;
+    line-height: 1em;
+  }
 }
 
 .cell:hover {

@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   body {
@@ -9,10 +9,10 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     height: 100vh;
     overflow-x: hidden;
-    transition: all 0.25s linear;
+    transition: all 0.2s linear;
   }
 
   html {
     scroll-behavior: smooth;
-    }
-`
+  }
+`;

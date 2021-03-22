@@ -8,17 +8,29 @@
   .deepRed {
     position: absolute;
     z-index: -1;
-    top: 35vh;
-    right: -200px;
-    filter: blur(200px) brightness(1.5);
+    top: -15%;
+    right: -50%;
+    width: 100%;
+    &.light {
+      filter: brightness(2);
+    }
+    &.dark {
+      filter: brightness(0.7);
+    }
   }
 
   .barney {
     position: absolute;
-    z-index: -1;
-    top: 35vh;
-    left: -200px;
-    filter: blur(200px) brightness(2);
+    z-index: -2;
+    top: -10%;
+    left: -60%;
+    width: 120%;
+    &.light {
+      filter: brightness(2);
+    }
+    &.dark {
+      filter: brightness(1.2);
+    }
   }
 
   .row {
@@ -84,20 +96,18 @@
     .deepRed {
       position: absolute;
       z-index: -1;
-      top: 0vh;
-      left: 0;
-      filter: blur(120px) brightness(1.5);
-      width: 60%;
+      top: 20%;
+      right: 0%;
+      width: 100%;
       overflow: hidden;
     }
   
     .barney {
       position: absolute;
       z-index: -1;
-      top: 50vh;
-      left: 0;
-      filter: blur(120px) brightness(2);
-      width: 60%;
+      top: 70%;
+      left: -20%;
+      width: 120%;
       overflow: hidden;
     }
   }

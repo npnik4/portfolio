@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import "./Hero.scss";
-import purple from "../../assets/Purple.svg";
-import blue from "../../assets/Blue.svg";
-import red from "../../assets/Red.svg";
-import orange from "../../assets/Orange.svg";
+import purple from "../../assets/Purple2.svg";
+import blue from "../../assets/Blue2.svg";
+import red from "../../assets/Red2.svg";
+import orange from "../../assets/Orange2.svg";
 import { Button, Container } from "@material-ui/core";
 import Fade from "react-reveal/Fade";
 import hero from "../../assets/HeroImage.svg";
@@ -14,7 +14,6 @@ import {
   TextHighlight,
   HeroSubText,
 } from "../../components/Styled/StyledComponents";
-import { isSafari, isMobileSafari } from "react-device-detect";
 
 function Hero(props) {
   const contact = () => {
@@ -54,30 +53,26 @@ function Hero(props) {
           </Fade>
         </div>
       </Container>
-      {!isSafari && !isMobileSafari ? (
-        <>
-          <img
-            src={purple}
-            alt="shape"
-            className={"purple " + (props.theme === "light" ? "light" : "dark")}
-          />
-          <img
-            src={blue}
-            alt="shape"
-            className={"blue " + (props.theme === "light" ? "light" : "dark")}
-          />
-          <img
-            src={red}
-            alt="shape"
-            className={"red " + (props.theme === "light" ? "light" : "dark")}
-          />
-          <img
-            src={orange}
-            alt="shape"
-            className={"orange " + (props.theme === "light" ? "light" : "dark")}
-          />{" "}
-        </>
-      ) : null}
+      <img
+        src={purple}
+        alt="shape"
+        className={"purple " + (props.theme === "light" ? "light" : "dark")}
+      />
+      <img
+        src={blue}
+        alt="shape"
+        className={"blue " + (props.theme === "light" ? "light" : "dark")}
+      />
+      <img
+        src={red}
+        alt="shape"
+        className={"red " + (props.theme === "light" ? "light" : "dark")}
+      />
+      <img
+        src={orange}
+        alt="shape"
+        className={"orange " + (props.theme === "light" ? "light" : "dark")}
+      />
     </div>
   );
 }

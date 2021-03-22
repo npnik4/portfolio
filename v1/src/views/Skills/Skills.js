@@ -3,17 +3,16 @@ import React from "react";
 import "./Skills.scss";
 import Flip from "react-reveal/Flip";
 import Pulse from "react-reveal/Pulse";
-import deepRed from "../../assets/DeepRed.svg";
-import barney from "../../assets/barney.svg";
+import deepRed from "../../assets/DeepRed2.svg";
+import barney from "../../assets/Barney2.svg";
 import {
   Title,
   TextHighlight,
   SkillIcon,
   SkillName,
 } from "../../components/Styled/StyledComponents";
-import { isSafari, isMobileSafari } from "react-device-detect";
 
-function Skills() {
+function Skills(props) {
   return (
     <Container maxWidth="lg" className="skillContainer" id="skills">
       <div className="row">
@@ -102,18 +101,22 @@ function Skills() {
             <SkillName>FireBase</SkillName>
           </div>
           <div className="skillCell">
-            {/* <img src={figma} alt="figma" className="img" /> */}
-            <SkillIcon className="devicon-figma-plain"></SkillIcon>
+            <SkillIcon className="devicon-sketch-line"></SkillIcon>
             <SkillName>Figma</SkillName>
           </div>
         </div>
       </Flip>
-      {!isSafari && !isMobileSafari ? (
-        <>
-          <img src={deepRed} alt="shape" className="deepRed" />
-          <img src={barney} alt="shape" className="barney" />
-        </>
-      ) : null}
+
+      <img
+        src={deepRed}
+        alt="shape"
+        className={"deepRed " + (props.theme === "light" ? "light" : "dark")}
+      />
+      <img
+        src={barney}
+        alt="shape"
+        className={"barney " + (props.theme === "light" ? "light" : "dark")}
+      />
     </Container>
   );
 }
