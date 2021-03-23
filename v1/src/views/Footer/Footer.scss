@@ -1,5 +1,4 @@
 .footer {
-
   .image {
     display: flex;
     flex-direction: row;
@@ -21,21 +20,36 @@
     z-index: -1;
     bottom: 0;
     left: -100px;
-    filter: blur(180px);
+    &.light {
+      filter: blur(180px) brightness(1);
+    }
+    &.dark {
+      filter: blur(180px) brightness(0.6);
+    }
   }
   .hotPink {
     position: absolute;
     z-index: -1;
     bottom: 0;
     left: 30%;
-    filter: blur(180px) brightness(1.5);
+    &.light {
+      filter: blur(180px) brightness(1.5);
+    }
+    &.dark {
+      filter: blur(180px) brightness(0.6);
+    }
   }
   .brightblue {
     position: absolute;
     z-index: -1;
     bottom: 0;
     right: -100px;
-    filter: blur(180px);
+    &.light {
+      filter: blur(180px) brightness(1);
+    }
+    &.dark {
+      filter: blur(180px) brightness(0.6);
+    }
   }
 
   @media screen and (max-width: 960px) {

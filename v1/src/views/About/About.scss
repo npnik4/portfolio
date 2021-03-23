@@ -48,23 +48,39 @@ $text-color: rgb(39, 39, 39);
   .blue {
     position: absolute;
     z-index: -1;
-    top: 60vh;
-    left: -200px;
-    filter: blur(150px);
+    top: 30%;
+    left: -40%;
+    &.light {
+      filter: brightness(1);
+    }
+    &.dark {
+      filter: brightness(0.6);
+    }
   }
   .aqua {
     position: absolute;
     z-index: -1;
-    top: -100px;
-    right: -200px;
-    filter: blur(170px) brightness(1.2);
+    top: -35%;
+    right: -30%;
+    &.light {
+      filter: brightness(1.5);
+    }
+    &.dark {
+      filter: brightness(0.8);
+    }
   }
   .orange {
     position: absolute;
     z-index: -1;
-    top: 60vh;
-    right: -200px;
-    filter: blur(180px) brightness(1.5);
+    top: 30%;
+    right: -30%;
+    width: 100%;
+    &.light {
+      filter: brightness(1.6);
+    }
+    &.dark {
+      filter: brightness(0.6);
+    }
   }
 
   @media screen and (max-width: 960px) {
@@ -74,31 +90,19 @@ $text-color: rgb(39, 39, 39);
     }
 
     .blue {
-      position: absolute;
-      z-index: -1;
-      top: 30vh;
-      left: 0;
-      filter: blur(120px);
-      width: 60%;
-      overflow: hidden;
+      width: 100%;
+      left: -30%;
+      top: 70%;
     }
     .aqua {
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      filter: blur(120px) brightness(1.2);
-      width: 60%;
-      overflow: hidden;
+      width: 120%;
+      left: -30%;
+      top: 0%;
     }
     .orange {
-      position: absolute;
-      z-index: -1;
-      top: 70vh;
+      width: 100%;
       left: 0;
-      filter: blur(120px) brightness(1.5);
-      width: 70%;
-      overflow: hidden;
+      top: 60%;
     }
   }
 }

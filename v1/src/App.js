@@ -13,12 +13,12 @@ import { ThemeProvider as StyledThemeProvider } from "styled-components";
 import { GlobalStyles } from "./global";
 import { lightTheme, darkTheme } from "./theme";
 import { ThemeToggle } from "./components/Styled/StyledComponents";
-import { useDarkMode } from './useDarkMode';
+import { useDarkMode } from "./useDarkMode";
 
 function App() {
   const [theme, toggleTheme, componentMounted] = useDarkMode();
 
-  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   const lightMaterialTheme = createMuiTheme({
     palette: {
@@ -69,19 +69,19 @@ function App() {
   }, []);
 
   if (!componentMounted) {
-    return <div />
-  };
+    return <div />;
+  }
 
   return (
     <>
-      <StyledThemeProvider
-        theme={themeMode}
-      >
+      <StyledThemeProvider theme={themeMode}>
         <GlobalStyles />
         {loading ? (
           <Preloader loading={loading} />
         ) : (
-          <ThemeProvider theme={theme === "light" ? lightMaterialTheme : darkMaterialTheme}>
+          <ThemeProvider
+            theme={theme === "light" ? lightMaterialTheme : darkMaterialTheme}
+          >
             <Navbar theme={theme} toggle={toggleTheme}>
               <ThemeToggle onClick={toggleTheme}>
                 <i className="fas fa-lightbulb"></i>
@@ -89,10 +89,10 @@ function App() {
             </Navbar>
             <Hero theme={theme} />
             <Feature theme={theme} />
-            <About />
+            <About theme={theme} />
             <Skills theme={theme} />
             <Projects theme={theme} />
-            <Footer />
+            <Footer theme={theme} />
           </ThemeProvider>
         )}
       </StyledThemeProvider>

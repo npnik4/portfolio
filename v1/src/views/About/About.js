@@ -4,9 +4,9 @@ import { Container } from "@material-ui/core";
 import PhotoCard from "../../components/PhotoCard/PhotoCard";
 import "./About.scss";
 import Fade from "react-reveal/Fade";
-import orange from "../../assets/DarkOrange.svg";
-import aqua from "../../assets/Aqua.svg";
-import blue from "../../assets/BabyBlue.svg";
+import orange from "../../assets/DarkOrange2.svg";
+import aqua from "../../assets/Aqua2.svg";
+import blue from "../../assets/BabyBlue2.svg";
 import {
   Title,
   TextHighlight,
@@ -17,7 +17,7 @@ import {
   List,
   Card,
 } from "../../components/Styled/StyledComponents";
-import { isMobile, isSafari, isMobileSafari } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 
 function About(props) {
   return (
@@ -65,13 +65,9 @@ function About(props) {
           ) : null}
         </Card>
       </Fade>
-      {!isSafari && !isMobileSafari ? (
-        <>
-          <img src={orange} alt="shape" className="orange" />
-          <img src={aqua} alt="shape" className="aqua" />
-          <img src={blue} alt="shape" className="blue" />
-        </>
-      ) : null}
+      <img src={orange} alt="shape" className={"orange " + props.theme} />
+      <img src={aqua} alt="shape" className={"aqua " + props.theme} />
+      <img src={blue} alt="shape" className={"blue " + props.theme} />
     </Container>
   );
 }

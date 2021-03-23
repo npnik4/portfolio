@@ -107,16 +107,8 @@ function Skills(props) {
         </div>
       </Flip>
 
-      <img
-        src={deepRed}
-        alt="shape"
-        className={"deepRed " + (props.theme === "light" ? "light" : "dark")}
-      />
-      <img
-        src={barney}
-        alt="shape"
-        className={"barney " + (props.theme === "light" ? "light" : "dark")}
-      />
+      <img src={deepRed} alt="shape" className={"deepRed " + props.theme} />
+      <img src={barney} alt="shape" className={"barney " + props.theme} />
     </Container>
   );
 }

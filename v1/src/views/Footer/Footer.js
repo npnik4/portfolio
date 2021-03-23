@@ -8,9 +8,8 @@ import {
   Text,
   FooterContainer,
 } from "../../components/Styled/StyledComponents";
-import { isSafari, isMobileSafari } from "react-device-detect";
 
-function Footer() {
+function Footer(props) {
   return (
     <FooterContainer className="footer" id="footer">
       {/* <div className="image">
@@ -19,13 +18,13 @@ function Footer() {
       <div className="text">
         <Text>© Copyright. All rights reserved.</Text>
       </div>
-      {!isSafari && !isMobileSafari ? (
-        <>
-          <img src={yellow} alt="shape" className="yellow" />
-          <img src={hotPink} alt="shape" className="hotPink" />
-          <img src={brightblue} alt="shape" className="brightblue" />
-        </>
-      ) : null}
+      <img src={yellow} alt="shape" className={"yellow " + props.theme} />
+      <img src={hotPink} alt="shape" className={"hotPink " + props.theme} />
+      <img
+        src={brightblue}
+        alt="shape"
+        className={"brightblue " + props.theme}
+      />
     </FooterContainer>
   );
 }

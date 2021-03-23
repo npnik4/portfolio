@@ -53,26 +53,10 @@ function Hero(props) {
           </Fade>
         </div>
       </Container>
-      <img
-        src={purple}
-        alt="shape"
-        className={"purple " + (props.theme === "light" ? "light" : "dark")}
-      />
-      <img
-        src={blue}
-        alt="shape"
-        className={"blue " + (props.theme === "light" ? "light" : "dark")}
-      />
-      <img
-        src={red}
-        alt="shape"
-        className={"red " + (props.theme === "light" ? "light" : "dark")}
-      />
-      <img
-        src={orange}
-        alt="shape"
-        className={"orange " + (props.theme === "light" ? "light" : "dark")}
-      />
+      <img src={purple} alt="shape" className={"purple " + props.theme} />
+      <img src={blue} alt="shape" className={"blue " + props.theme} />
+      <img src={red} alt="shape" className={"red " + props.theme} />
+      <img src={orange} alt="shape" className={"orange " + props.theme} />
     </div>
   );
 }

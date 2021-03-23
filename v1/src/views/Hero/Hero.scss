@@ -39,7 +39,7 @@
     width: 6rem;
   }
 
-  @media screen and  (max-width: 560px) {
+  @media screen and (max-width: 560px) {
     .scroll {
       margin-left: 0px;
     }
@@ -86,11 +86,11 @@
   .purple {
     z-index: -1;
     overflow: hidden;
-    position:absolute;
-    top:30%;
-    left:40%;
-    width:0;
-    padding:0;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 0;
+    padding: 0;
     animation: explodePurple 1s forwards;
     &.light {
       filter: brightness(1.5);
@@ -102,11 +102,11 @@
   .blue {
     z-index: -1;
     overflow: hidden;
-    position:absolute;
-    top:30%;
-    right:40%;
-    width:0;
-    padding:0;
+    position: absolute;
+    top: 30%;
+    right: 40%;
+    width: 0;
+    padding: 0;
     animation: explodeBlue 1s forwards;
     &.light {
       filter: brightness(1.2);
@@ -120,11 +120,11 @@
   .red {
     z-index: -2;
     overflow: hidden;
-    position:absolute;
-    top:30%;
-    right:40%;
-    width:0;
-    padding:0;
+    position: absolute;
+    top: 30%;
+    right: 40%;
+    width: 0;
+    padding: 0;
     animation: explodeRed 1s forwards;
     &.light {
       filter: brightness(1.5);
@@ -136,11 +136,11 @@
   .orange {
     z-index: -3;
     overflow: hidden;
-    position:absolute;
-    top:30%;
-    left:40%;
-    width:0;
-    padding:0;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 0;
+    padding: 0;
     animation: explodeOrange 1s forwards;
     &.light {
       filter: brightness(1);
@@ -152,50 +152,50 @@
 
   @keyframes explodePurple {
     0% {
-        width:40%;
-     }
-    100%{
+      width: 40%;
+    }
+    100% {
       width: 90%;
       top: 10%;
       left: -40%;
-     }
+    }
   }
 
   @keyframes explodeBlue {
     0% {
-        width:40%
-     }
-    100%{
+      width: 40%;
+    }
+    100% {
       width: 90%;
       top: -90%;
       right: -40%;
-     }
+    }
   }
 
   @keyframes explodeRed {
     0% {
-        width:40%
-     }
-    100%{
+      width: 40%;
+    }
+    100% {
       width: 90%;
       top: 10%;
       right: -40%;
-     }
+    }
   }
 
   @keyframes explodeOrange {
     0% {
-        width:40%
-     }
-    100%{
-        width: 90%;
-        top: -90%;
-        left: -40%;
-        // padding:5px;
-     }
+      width: 40%;
+    }
+    100% {
+      width: 90%;
+      top: -90%;
+      left: -40%;
+      // padding:5px;
+    }
   }
 
-  @media screen and (max-width: 1500px) { 
+  @media screen and (max-width: 1500px) {
     .image {
       img {
         width: 75%;
@@ -205,40 +205,28 @@
 
   @media screen and (max-width: 960px) {
     .purple {
-      position: absolute;
-      z-index: -1;
-      top: 60vh;
-      left: -10%;
-      width: 70%;
+      top: 50%;
+      left: -30%;
+      width: 120%;
       animation: none;
-      overflow: hidden;
     }
     .blue {
-      position: absolute;
-      z-index: -1;
       top: 0;
-      left: 35%;
-      width: 60%;
+      left: 0%;
+      width: 100%;
       animation: none;
-      overflow: hidden;
     }
     .red {
-      position: absolute;
-      z-index: -1;
-      top: 60vh;
-      left: 35%;
-      width: 60%;
+      top: 50%;
+      left: 0%;
+      width: 100%;
       animation: none;
-      overflow: hidden;
     }
     .orange {
-      position: absolute;
-      z-index: -2;
-      top: 0;
-      left: 0;
-      width: 60%;
+      top: 5%;
+      left: -40%;
+      width: 100%;
       animation: none;
-      overflow: hidden;
     }
     .image {
       display: none;
@@ -265,7 +253,6 @@
   }
 
   @media screen and (max-width: 500px) {
-
     .text-container {
       .text {
         padding: 0 1em;
@@ -277,5 +264,3 @@
     }
   }
 }
-
-
