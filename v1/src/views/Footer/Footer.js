@@ -1,9 +1,9 @@
 import React from "react";
 import "./Footer.scss";
 // import creds from "../../assets/creds.svg";
-import yellow from "../../assets/yellow.svg";
-import hotPink from "../../assets/hotPink.svg";
-import brightblue from "../../assets/brightblue.svg";
+import yellow from "../../assets/Yellow2.svg";
+import hotPink from "../../assets/HotPink2.svg";
+import brightblue from "../../assets/BrightBlue2.svg";
 import {
   Text,
   FooterContainer,

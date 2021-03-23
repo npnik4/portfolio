@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     height: 100vh;
     overflow-x: hidden;
-    transition: all 0.2s linear;
+    transition: all 0s;
   }
 
   html {

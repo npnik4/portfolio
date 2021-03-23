@@ -15,7 +15,7 @@
       filter: brightness(2);
     }
     &.dark {
-      filter: brightness(0.7);
+      filter: brightness(0.6);
     }
   }
 
@@ -26,10 +26,10 @@
     left: -60%;
     width: 120%;
     &.light {
-      filter: brightness(2);
+      filter: brightness(1.8);
     }
     &.dark {
-      filter: brightness(1.2);
+      filter: brightness(1);
     }
   }
 
@@ -101,7 +101,7 @@
       width: 100%;
       overflow: hidden;
     }
-  
+
     .barney {
       position: absolute;
       z-index: -1;

@@ -28,6 +28,7 @@ export const HeroHeading = styled.h1`
 
 export const TextHighlight = styled.span`
   color: ${({ theme }) => theme.button};
+  background-image: ${({ theme }) => theme.line};
 `;
 
 export const Text = styled.p`
