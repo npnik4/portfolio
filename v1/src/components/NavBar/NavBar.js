@@ -42,9 +42,10 @@ function Navbar(props) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollpos, isVisible, handleScroll]);
 
-  const resume = () => {
-    window.location.href = res;
-  };
+  // const resume = () => {
+  //   window.location.target = "_blank";
+  //   window.location.href = res;
+  // };
 
   return (
     <nav
@@ -106,13 +107,13 @@ function Navbar(props) {
           </li>
           <li className="menu-button">
             <a
-              href="/"
+              href={res}
+              download="Nikhil-Patel-Resume"
               className={
                 props.theme === "light"
                   ? "nav-links-mobile"
                   : "nav-links-mobile-dark"
               }
-              onClick={() => resume()}
             >
               Resume
             </a>
@@ -127,7 +128,8 @@ function Navbar(props) {
             size="small"
             color="secondary"
             variant="contained"
-            onClick={() => resume()}
+            href={res}
+            download="Nikhil-Patel-Resume"
           >
             Resume
           </Button>

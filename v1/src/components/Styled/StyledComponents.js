@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
 export const ThemeToggle = styled.div`
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.bulb};
   transition: all 0.25s linear;
   width: 35px;
-  height: 35px;
+  height: 40px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0px 0 20px;
   cursor: pointer;
+  font-size: 1.5em;
 `;
 
 export const HeroHeading = styled.h1`
