@@ -1,4 +1,4 @@
-import { Container } from "@material-ui/core";
+import { Button, Container } from "@material-ui/core";
 import React from "react";
 import "./Skills.scss";
 import Flip from "react-reveal/Flip";
@@ -11,6 +11,7 @@ import {
   SkillIcon,
   SkillName,
 } from "../../components/Styled/StyledComponents";
+import { Link } from "react-router-dom";
 
 function Skills(props) {
   return (
@@ -104,6 +105,15 @@ function Skills(props) {
             <SkillIcon className="devicon-sketch-line"></SkillIcon>
             <SkillName>Figma</SkillName>
           </div>
+        </div>
+      </Flip>
+      <Flip bottom delay={600}>
+        <div className="row-button">
+          <Link to="/details" style={{ textDecoration: "none" }}>
+            <Button variant="outlined" size="large" color="secondary">
+              View Details
+            </Button>
+          </Link>
         </div>
       </Flip>
 

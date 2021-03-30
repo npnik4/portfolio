@@ -54,7 +54,7 @@ function Navbar(props) {
       style={{ top: isVisible ? "0" : "-100px" }}
     >
       <div className="navbar-container">
-        <a href="#" className="navbar-logo" onClick={closeMobileMenu}>
+        <a href="/" className="navbar-logo" onClick={closeMobileMenu}>
           <img
             src={props.theme === "light" ? logo : logoDark}
             alt="logo"

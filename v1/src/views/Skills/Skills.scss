@@ -40,6 +40,14 @@
     justify-content: space-around;
     align-items: center;
 
+    &-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 4em;
+    }
+
     .skillCell {
       width: 6em;
       height: 6em;
@@ -75,6 +83,10 @@
 
   @media screen and (max-width: 960px) {
     .row {
+      &-button {
+        margin-top: 3em;
+      }
+
       .skillCell {
         width: 5em;
         height: 5em;
@@ -114,6 +126,9 @@
 
   @media screen and (max-width: 500px) {
     .row {
+      &-button {
+        margin-top: 3em;
+      }
       padding: 1em;
       .skillCell {
         width: 3.5em;

@@ -14,7 +14,7 @@ export const ThemeToggle = styled.div`
   font-size: 1.5em;
 `;
 
-export const HeroHeading = styled.h1`
+export const HeroHeading = styled.div`
   color: ${({ theme }) => theme.text};
   font-size: 5em;
   font-weight: 600;
@@ -30,6 +30,8 @@ export const HeroHeading = styled.h1`
 export const TextHighlight = styled.span`
   color: ${({ theme }) => theme.button};
   background-image: ${({ theme }) => theme.line};
+  padding: 0 3px;
+  border-radius: 5px;
 `;
 
 export const Text = styled.p`
@@ -122,9 +124,20 @@ export const SkillName = styled.span`
 export const Title = styled.h1`
   color: ${({ theme }) => theme.text};
   text-align: center;
-  padding: 3em;
+  padding: 1.5em 0;
+  font-size: 3em;
   @media screen and (max-width: 960px) {
-    padding: 1em;
+    font-size: 2em;
+    padding: 1em 0;
+  }
+`;
+
+export const PlainTitle = styled.h1`
+  color: ${({ theme }) => theme.text};
+  text-align: center;
+  font-size: 3em;
+  @media screen and (max-width: 960px) {
+    font-size: 2em;
   }
 `;
 
@@ -213,6 +226,27 @@ export const Card = styled.div`
   }
   @media screen and (max-width: 660px) {
     width: 90%;
+    padding: 15px;
+  }
+`;
+
+export const SmallCard = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  height: 100%;
+  margin: 5px;
+  padding: 25px;
+  box-shadow: 5px 11px 50px rgba(0, 0, 0, 0.1);
+  background: ${({ theme }) => theme.card};
+  border-radius: 30px;
+  @media screen and (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  @media screen and (max-width: 660px) {
     padding: 15px;
   }
 `;
