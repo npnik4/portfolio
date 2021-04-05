@@ -5,7 +5,16 @@ import { AnimateSharedLayout, motion } from "framer-motion";
 import "./Card.scss";
 
 function Card(props) {
-  const { toggle, name, description, css, active, link, children } = props;
+  const {
+    toggle,
+    name,
+    description,
+    css,
+    textColor,
+    active,
+    link,
+    children,
+  } = props;
 
   return (
     <AnimateSharedLayout>
@@ -46,7 +55,14 @@ function Card(props) {
           delay={active ? 0 : 400}
         >
           <motion.div className="default">
-            <div className="default-content">{name}</div>
+            <div className="default-content">
+              <div className="default-container">
+                <div className="name">{name}</div>
+                <div className="description" style={{ color: textColor }}>
+                  <p>{description}</p>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </Fade>
       </div>

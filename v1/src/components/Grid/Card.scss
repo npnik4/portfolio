@@ -39,12 +39,39 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
-  font-size: 2em;
+  height: 100%;
+  // font-size: 2em;
 
   .default-content {
     z-index: 1;
-    text-align: center;
-    line-height: 1em;
+    height: 100%;
+    padding: 1em;
+    .default-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      .name {
+        text-align: center;
+        font-size: 2.5em;
+        line-height: 1.2em;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 60%;
+      }
+      .description {
+        text-align: center;
+        font-size: 1em;
+        line-height: 1.2em;
+        text-transform: none;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 40%;
+      }
+    }
   }
 }
 
@@ -178,7 +205,6 @@
 }
 
 @media screen and (max-width: 500px) {
-
   .expandedCell {
     height: 95vh;
   }
@@ -189,11 +215,10 @@
       flex-direction: column;
       padding: 0.2em;
       height: 78%;
-      
+
       img {
         max-width: 64% !important;
       }
-
     }
   }
   .details p {

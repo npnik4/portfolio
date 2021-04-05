@@ -71,7 +71,7 @@ function App() {
       <StyledThemeProvider theme={themeMode}>
         <GlobalStyles />
         {loading ? (
-          <Preloader loading={loading} />
+          <Preloader loading={loading} theme={theme} />
         ) : (
           <ThemeProvider
             theme={theme === "light" ? lightMaterialTheme : darkMaterialTheme}

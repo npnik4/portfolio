@@ -1,18 +1,18 @@
 import React from "react";
 import logo from "../../assets/logo2.svg";
-import { AnimateSharedLayout, motion } from "framer-motion";
+import logoDark from "../../assets/logoDark.svg";
 import "./Preloader.scss";
-import Pulse from 'react-reveal/Pulse';
+import Pulse from "react-reveal/Pulse";
+import { Loader } from "../Styled/StyledComponents";
 
 function Preloader(props) {
+  const light = props.theme === "light";
   return (
-    <AnimateSharedLayout>
-        <motion.div className="loader">
-        <Pulse forever={true}>
-          <img src={logo} alt="logo" className="image"></img>
-        </Pulse>
-        </motion.div>
-    </AnimateSharedLayout>
+    <Loader>
+      <Pulse forever={true}>
+        <img src={light ? logo : logoDark} alt="logo" className="image"></img>
+      </Pulse>
+    </Loader>
   );
 }
 

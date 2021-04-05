@@ -262,3 +262,21 @@ export const FooterContainer = styled.div`
   align-items: center;
   position: relative;
 `;
+
+export const Loader = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: ${({ theme }) => theme.preloaderBackup};
+  background: ${({ theme }) => theme.preloaderSupport};
+  background: ${({ theme }) => theme.preloader};
+  transition: all 1s ease-in-out;
+  overflow-y: hidden;
+  .image {
+    height: 150px;
+    width: 150px;
+  }
+`;

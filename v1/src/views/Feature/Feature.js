@@ -8,8 +8,8 @@ import gif from "../../assets/scanavert/bCode_Fav.gif";
 import Card from "../../components/Grid/Card";
 import "./Feature.scss";
 import Carousel from "../../components/Carousel/Carousel";
-import {urRecalls, scanavert} from './data';
-import {Title, TextHighlight} from '../../components/Styled/StyledComponents';
+import { urRecalls, scanavert } from "./data";
+import { Title, TextHighlight } from "../../components/Styled/StyledComponents";
 
 function Feature(props) {
   const [active, setActive] = useState([false, false]);
@@ -30,7 +30,7 @@ function Feature(props) {
     setActive(newActive);
   };
 
-  const light = props.theme === 'light';
+  const light = props.theme === "light";
 
   return (
     <Container maxWidth="lg" className="feature" id="feature">
@@ -43,11 +43,19 @@ function Feature(props) {
             toggle={() => toggle(0)}
             name="UrRecalls"
             description={urRecalls.headline}
-            css={light ? "linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)" : "linear-gradient(to top, rgb(228 178 156) 0%, rgb(97 183 224) 100%)"} //linear-gradient(to top, rgb(228 178 156) 0%, rgb(97 183 224) 100%)
+            css={
+              light
+                ? "linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)"
+                : "linear-gradient(to top, rgb(228 178 156) 0%, rgb(97 183 224) 100%)"
+            } //linear-gradient(to top, rgb(228 178 156) 0%, rgb(97 183 224) 100%)
             active={active[0]}
             link="https://npnik4.github.io/assets/docs/UrRecalls.pdf"
+            textColor={light ? "#727272" : "#313131"}
           >
-            <Carousel images={[logo, homeScreen, recall]} description={urRecalls.description}/>
+            <Carousel
+              images={[logo, homeScreen, recall]}
+              description={urRecalls.description}
+            />
           </Card>
         </div>
         <div className="item">
@@ -55,9 +63,14 @@ function Feature(props) {
             toggle={() => toggle(1)}
             name="SCANAVERT"
             description={scanavert.headline}
-            css={light ? "linear-gradient(120deg, #f6d365 0%, #fda085 100%)" : "linear-gradient(120deg, rgb(212 178 74) 0%, rgb(197 114 89) 100%)"} //linear-gradient(120deg, rgb(212 178 74) 0%, rgb(197 114 89) 100%)
+            css={
+              light
+                ? "linear-gradient(120deg, #f6d365 0%, #fda085 100%)"
+                : "linear-gradient(120deg, rgb(212 178 74) 0%, rgb(197 114 89) 100%)"
+            } //linear-gradient(120deg, rgb(212 178 74) 0%, rgb(197 114 89) 100%)
             active={active[1]}
             link="https://npnik4.github.io/assets/docs/Scan%20Avert.pdf"
+            textColor={light ? "#727272" : "#313131"}
           >
             <Carousel
               images={[ScanAvert, gif]}
