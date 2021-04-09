@@ -29,7 +29,7 @@ function Details(props) {
     <div className="Details">
       <NavBarLite theme={props.theme}>
         <ThemeToggle onClick={props.toggleTheme}>
-          <i className="fas fa-lightbulb"></i>
+          <i className={light ? "far fa-moon" : "far fa-sun"}></i>
         </ThemeToggle>
       </NavBarLite>
       <Container maxWidth="lg" className="detailsContainer">

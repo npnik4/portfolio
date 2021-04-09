@@ -14,7 +14,7 @@ function Home(props) {
     <>
       <Navbar theme={theme}>
         <ThemeToggle onClick={toggleTheme}>
-          <i className="fas fa-lightbulb"></i>
+          <i className={theme === "light" ? "far fa-moon" : "far fa-sun"}></i>
         </ThemeToggle>
       </Navbar>
       <Hero theme={theme} />
