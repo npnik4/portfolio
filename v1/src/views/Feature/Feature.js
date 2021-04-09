@@ -51,6 +51,7 @@ function Feature(props) {
             active={active[0]}
             link="https://npnik4.github.io/assets/docs/UrRecalls.pdf"
             textColor={light ? "#727272" : "#313131"}
+            tags={urRecalls.tags}
           >
             <Carousel
               images={[logo, homeScreen, recall]}
@@ -71,6 +72,7 @@ function Feature(props) {
             active={active[1]}
             link="https://npnik4.github.io/assets/docs/Scan%20Avert.pdf"
             textColor={light ? "#727272" : "#313131"}
+            tags={scanavert.tags}
           >
             <Carousel
               images={[ScanAvert, gif]}

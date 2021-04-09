@@ -4,16 +4,26 @@ import { Slug, Fade } from "./Primitives";
 import { AnimateSharedLayout, motion } from "framer-motion";
 import "./Card.scss";
 
+function Tag(props) {
+  const { color, skill, icon } = props;
+  return (
+    <div className="tag" style={{ background: color }}>
+      <i className={icon} />
+      <span>{skill}</span>
+    </div>
+  );
+}
+
 function Card(props) {
   const {
     toggle,
     name,
     description,
     css,
-    textColor,
     active,
     link,
     children,
+    tags,
   } = props;
 
   return (
@@ -58,8 +68,17 @@ function Card(props) {
             <div className="default-content">
               <div className="default-container">
                 <div className="name">{name}</div>
-                <div className="description" style={{ color: textColor }}>
-                  <p>{description}</p>
+                <div className="description">
+                  {tags &&
+                    tags.map((tag, i) => {
+                      return (
+                        <Tag
+                          color={tag.color}
+                          icon={tag.icon}
+                          skill={tag.skill}
+                        />
+                      );
+                    })}
                 </div>
               </div>
             </div>

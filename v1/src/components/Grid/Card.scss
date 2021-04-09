@@ -17,6 +17,25 @@
   min-height: 200px;
 }
 
+.tag {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  font-size: 14px;
+  padding: 0 12px;
+  margin: 0em 0.5em 1em 0;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s linear;
+  box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.1), 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  span {
+    padding: 0 5px;
+    text-transform: none;
+  }
+}
+
 .expandedCell {
   position: absolute;
   top: 0px;
@@ -40,11 +59,13 @@
   justify-content: center;
   padding: 20px;
   height: 100%;
+  width: 100%;
   // font-size: 2em;
 
   .default-content {
     z-index: 1;
     height: 100%;
+    width: 100%;
     padding: 1em;
     .default-container {
       display: flex;
@@ -53,23 +74,23 @@
       align-items: center;
       height: 100%;
       .name {
-        text-align: center;
         font-size: 2.5em;
         line-height: 1.2em;
         display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        height: 60%;
+        justify-content: flex-start;
+        align-items: center;
+        height: 70%;
+        width: 100%;
       }
       .description {
-        text-align: center;
-        font-size: 1em;
-        line-height: 1.2em;
-        text-transform: none;
-        display: flex;
-        justify-content: center;
+        margin-top: 1em;
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 0;
+        align-content: flex-start;
         align-items: flex-end;
-        height: 40%;
+        height: 30%;
+        width: 100%;
       }
     }
   }
@@ -229,5 +250,11 @@
     padding-top: 6px;
     text-transform: none;
     width: 95%;
+  }
+  .default {
+    padding: 10px;
+    .default-content {
+      padding: 0.5em;
+    }
   }
 }
