@@ -3,6 +3,8 @@ import React from "react";
 import { Slug, Fade } from "./Primitives";
 import { AnimateSharedLayout, motion } from "framer-motion";
 import "./Card.scss";
+import Modal from "react-modal";
+import { useDarkMode } from "../../useDarkMode";
 
 function Tag(props) {
   const { color, skill, icon } = props;
@@ -26,36 +28,69 @@ function Card(props) {
     tags,
   } = props;
 
+  const [theme] = useDarkMode();
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      width: "90%",
+      height: "80vh",
+      backgroundSize: "cover",
+      boxShadow: "0px 10px 55px 30px rgba(0, 0, 0, 0.15)",
+      transition: "all 0.5s",
+      borderRadius: "15px",
+      backgroundImage: css,
+      border: "none",
+    },
+    overlay: {
+      background:
+        theme === "light" ? "rgb(255 255 255 / 50%)" : "rgb(0 0 0 / 50%)",
+    },
+  };
+  Modal.setAppElement("#root");
+
   return (
     <AnimateSharedLayout>
       <div
-        className={active ? "expandedCell" : "cell"}
+        className={"cell"}
         style={{ backgroundImage: css, cursor: !active ? "pointer" : "auto" }}
         onClick={!active ? toggle : undefined}
       >
-        <Fade show={active} delay={active ? 500 : 0}>
-          <motion.div className="details">
-            <Slug delay={600}>
-              <div className="close">
-                <i
-                  className="fas fa-times"
-                  style={{
-                    cursor: "pointer",
-                    fontSize: "32px",
-                    color: "#777777",
-                  }}
-                  onClick={toggle}
-                />
-              </div>
-              <div className="info-container">{children}</div>
-              <h1>{name}</h1>
-              <p>{description}</p>
-              <a href={link} target="_blank" className="button">
-                More information
-              </a>
-            </Slug>
-          </motion.div>
-        </Fade>
+        <Modal
+          isOpen={active}
+          onRequestClose={toggle}
+          style={customStyles}
+          contentLabel="Modal"
+        >
+          <Fade show={active} delay={active ? 500 : 0}>
+            <motion.div className="details">
+              <Slug delay={600}>
+                <div className="close">
+                  <i
+                    className="fas fa-times"
+                    style={{
+                      cursor: "pointer",
+                      fontSize: "32px",
+                      color: "#777777",
+                    }}
+                    onClick={toggle}
+                  />
+                </div>
+                <div className="info-container">{children}</div>
+                <h1>{name}</h1>
+                <p>{description}</p>
+                <a href={link} target="_blank" className="button">
+                  More information
+                </a>
+              </Slug>
+            </motion.div>
+          </Fade>
+        </Modal>
 
         <Fade
           show={!active}

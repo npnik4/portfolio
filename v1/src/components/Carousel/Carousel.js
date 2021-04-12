@@ -7,7 +7,7 @@ function Carousel(props) {
 
   const imageStyles = {
     objectFit: "contain",
-    maxWidth: "25%",
+    maxWidth: "20%",
     maxHeight: "100%",
   };
 

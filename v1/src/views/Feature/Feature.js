@@ -19,13 +19,16 @@ function Feature(props) {
     const newActive = Object.assign([], active);
     newActive[index] = !newActive[index];
     if (newActive[index]) {
-      var offset = window.innerWidth < 500 ? 20 : 50;
-      var el = document.getElementById("featureWork");
-      window.scroll({
-        top: el.offsetTop - offset,
-        left: 0,
-        behavior: "smooth",
-      });
+      // var offset = window.innerWidth < 500 ? 20 : 50;
+      // var el = document.getElementById("featureWork");
+      document.body.style.overflow = "hidden";
+      // window.scroll({
+      //   top: el.offsetTop - offset,
+      //   left: 0,
+      //   behavior: "smooth",
+      // });
+    } else {
+      document.body.style.overflow = "unset";
     }
     setActive(newActive);
   };
@@ -77,7 +80,7 @@ function Feature(props) {
             <Carousel
               images={[ScanAvert, gif]}
               styles={[
-                { objectFit: "contain", maxWidth: "27%", maxHeight: "100%" },
+                { objectFit: "contain", maxWidth: "20%", maxHeight: "100%" },
                 { objectFit: "contain", maxWidth: "15%", maxHeight: "100%" },
               ]}
               description={scanavert.description}

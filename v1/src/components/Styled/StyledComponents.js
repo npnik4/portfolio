@@ -270,9 +270,9 @@ export const Loader = styled.div`
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: ${({ theme }) => theme.preloaderBackup};
-  background: ${({ theme }) => theme.preloaderSupport};
-  background: ${({ theme }) => theme.preloader};
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   transition: all 1s ease-in-out;
   overflow-y: hidden;
   .image {
@@ -280,3 +280,7 @@ export const Loader = styled.div`
     width: 150px;
   }
 `;
+
+// background: ${({ theme }) => theme.preloaderBackup};
+// background: ${({ theme }) => theme.preloaderSupport};
+// background: ${({ theme }) => theme.preloader};

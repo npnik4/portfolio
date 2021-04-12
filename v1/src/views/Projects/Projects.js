@@ -34,15 +34,17 @@ function Projects(props) {
     const newActive = Object.assign([], active);
     newActive[index] = !newActive[index];
     if (newActive[index]) {
-      var offset = window.innerWidth < 500 ? 20 : 50;
-      var el = document.getElementById("gridStart");
-      window.scroll({
-        top: el.offsetTop - offset,
-        left: 0,
-        behavior: "smooth",
-      });
+      document.body.style.overflow = "hidden";
+      // var offset = window.innerWidth < 500 ? 20 : 50;
+      // var el = document.getElementById("gridStart");
+      // window.scroll({
+      //   top: el.offsetTop - offset,
+      //   left: 0,
+      //   behavior: "smooth",
+      // });
     } else {
-      document.getElementById(index + "").scrollIntoView();
+      // document.getElementById(index + "").scrollIntoView();
+      document.body.style.overflow = "unset";
     }
     setActive(newActive);
   };
