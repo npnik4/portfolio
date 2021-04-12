@@ -29,6 +29,7 @@ function Feature(props) {
       // });
     } else {
       document.body.style.overflow = "unset";
+      document.body.style.overflowX = "hidden";
     }
     setActive(newActive);
   };

@@ -45,6 +45,7 @@ function Projects(props) {
     } else {
       // document.getElementById(index + "").scrollIntoView();
       document.body.style.overflow = "unset";
+      document.body.style.overflowX = "hidden";
     }
     setActive(newActive);
   };
