@@ -7,7 +7,7 @@ function NavbarLite(props) {
   return (
     <nav className="navbar-lite">
       <div className="navbar-container-lite">
-        <a href="/" className="navbar-logo-lite">
+        <a href="/portfolio" className="navbar-logo-lite">
           <img
             src={props.theme === "light" ? logo : logoDark}
             alt="logo"
