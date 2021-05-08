@@ -15,7 +15,10 @@ import riseHome from "../../assets/rise/rise_home.png";
 import riseTasks from "../../assets/rise/rise_tasks.png";
 import riseProfile from "../../assets/rise/rise_profile.png";
 import riseAddress from "../../assets/rise/rise_address.png";
-import drink from "../../assets/drink.jpg";
+// import drink from "../../assets/drink.jpg";
+import drinkHome from "../../assets/Home.png";
+import drinkAbout from "../../assets/About.png";
+import drinkBrowse from "../../assets/Browse.png";
 import escape from "../../assets/escape-orphan.jpg";
 import { rlInc, rise, instaCook, tellMeTheDrink, orphanage } from "./data";
 
@@ -145,7 +148,14 @@ function Projects(props) {
             textColor={light ? "#727272" : "#313131"}
             tags={tellMeTheDrink.tags}
           >
-            <img src={drink} alt="urrecalls" style={imageStyles} />
+            <Carousel
+              images={[drinkHome, drinkAbout, drinkBrowse]}
+              styles={[
+                { objectFit: "contain", maxWidth: "70%", maxHeight: "70%" },
+                { objectFit: "contain", maxWidth: "70%", maxHeight: "70%" },
+                { objectFit: "contain", maxWidth: "70%", maxHeight: "70%" },
+              ]}
+            />
           </Card>
         </div>
         <div className="work5" id="4">
