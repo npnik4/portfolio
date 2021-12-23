@@ -2,7 +2,7 @@ export const lightTheme = {
   body: "#FFFAE8",
   text: "#000",
   button: "#D53867",
-  card: "linear-gradient( 109.26deg, rgba(255, 255, 255, 0.555) 0%, rgba(255, 255, 255, 0.13) 100.54%)",
+  card: "linear-gradient(109.26deg, rgb(255 250 232) 0%, rgb(255 250 232) 100.54%)",
   line: "linear-gradient(180deg, transparent 65%, #transparent 65%);",
   bulb: "#000",
   preloader: "linear-gradient(to bottom, #fffde4, #005aa7)",

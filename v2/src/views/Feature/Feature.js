@@ -29,6 +29,12 @@ function Feature(props) {
 
   const light = props.theme === "light";
 
+  const lightCardColor =
+    "linear-gradient(120deg, rgb(245 183 208) 0%, rgb(245 130 135) 100%)";
+
+  const darkCardColor =
+    "linear-gradient(120deg, rgb(0 71 106) 0%, rgb(204 72 98) 100%)";
+
   return (
     <div className="parent">
       <Container maxWidth="lg" className="feature" id="feature">
@@ -39,14 +45,10 @@ function Feature(props) {
               toggle={() => toggle(0)}
               name="UrRecalls"
               description={urRecalls.headline}
-              css={
-                light
-                  ? "linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)"
-                  : "linear-gradient(to top, rgb(228 178 156) 0%, rgb(97 183 224) 100%)"
-              } //linear-gradient(to top, rgb(228 178 156) 0%, rgb(97 183 224) 100%)
+              css={light ? lightCardColor : darkCardColor} //linear-gradient(to top, rgb(228 178 156) 0%, rgb(97 183 224) 100%)
               active={active[0]}
               link="https://npnik4.github.io/assets/docs/UrRecalls.pdf"
-              textColor={light ? "#727272" : "#313131"}
+              textColor={light ? "#000" : "#fff"}
               tags={urRecalls.tags}
             >
               <Carousel
@@ -60,14 +62,10 @@ function Feature(props) {
               toggle={() => toggle(1)}
               name="SCANAVERT"
               description={scanavert.headline}
-              css={
-                light
-                  ? "linear-gradient(120deg, #f6d365 0%, #fda085 100%)"
-                  : "linear-gradient(120deg, rgb(212 178 74) 0%, rgb(197 114 89) 100%)"
-              }
+              css={light ? lightCardColor : darkCardColor}
               active={active[1]}
               link="https://npnik4.github.io/assets/docs/Scan%20Avert.pdf"
-              textColor={light ? "#727272" : "#313131"}
+              textColor={light ? "#000" : "#fff"}
               tags={scanavert.tags}
             >
               <Carousel

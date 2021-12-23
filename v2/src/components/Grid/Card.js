@@ -26,6 +26,7 @@ function Card(props) {
     link,
     children,
     tags,
+    textColor,
   } = props;
 
   const [theme] = useDarkMode();
@@ -41,7 +42,7 @@ function Card(props) {
       width: "90%",
       height: "80vh",
       backgroundSize: "cover",
-      boxShadow: "0px 10px 55px 30px rgba(0, 0, 0, 0.15)",
+      boxShadow: "0px 10px 55px 30px rgba(0, 0, 0, 0.25)",
       transition: "all 0.5s",
       borderRadius: "15px",
       backgroundImage: css,
@@ -57,8 +58,11 @@ function Card(props) {
   return (
     <AnimateSharedLayout>
       <div
-        className={"cell"}
-        style={{ backgroundImage: css, cursor: !active ? "pointer" : "auto" }}
+        className={theme === "light" ? "cellLight" : "cellDark"}
+        style={{
+          backgroundImage: css,
+          cursor: !active ? "pointer" : "auto",
+        }}
         onClick={!active ? toggle : undefined}
       >
         <Modal
@@ -76,7 +80,7 @@ function Card(props) {
                     style={{
                       cursor: "pointer",
                       fontSize: "32px",
-                      color: "#777777",
+                      color: "#000",
                     }}
                     onClick={toggle}
                   />
@@ -102,7 +106,9 @@ function Card(props) {
           <motion.div className="default">
             <div className="default-content">
               <div className="default-container">
-                <div className="name">{name}</div>
+                <div className="name" style={{ color: textColor }}>
+                  {name}
+                </div>
                 <div className="description">
                   {tags &&
                     tags.map((tag, i) => {

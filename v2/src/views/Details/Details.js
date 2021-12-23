@@ -52,10 +52,7 @@ function Details(props) {
           <div className="smallCardRow">
             <SmallCard>
               <div className="smallCardContainer">
-                <P3>
-                  Work <br />
-                  (ADP)
-                </P3>
+                <P3>Work</P3>
                 <Doughnut
                   id={"workChart"}
                   data={workData}
