@@ -1,11 +1,10 @@
 .feature {
-  margin-top: 5em;
-  padding-top: 5em;
+  // margin-top: 5em;
+  padding-top: 10em;
   display: flex !important;
   flex-direction: column;
   align-items: center;
-  padding: 3em;
-  // position: relative;
+  // padding: 3em;
   width: 100%;
 
   .title {
@@ -50,4 +49,24 @@
       }
     }
   }
+}
+
+.parent {
+  position: relative;
+}
+
+.spacer2 {
+  aspect-ratio: 960/600;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
+  position: absolute;
+  top: 0;
+}
+
+.layer2 {
+  background-image: url('../../assets/wave-top.svg');
+  opacity: 0.25;
 }

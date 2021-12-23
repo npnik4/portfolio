@@ -1,10 +1,7 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from "react";
 import "./Hero.scss";
-import purple from "../../assets/Purple2.svg";
-import blue from "../../assets/Blue2.svg";
-import red from "../../assets/Red2.svg";
-import orange from "../../assets/Orange2.svg";
+
 import { Button, Container } from "@material-ui/core";
 import Fade from "react-reveal/Fade";
 import hero from "../../assets/HeroImage.svg";
@@ -53,10 +50,7 @@ function Hero(props) {
           </Fade>
         </div>
       </Container>
-      <img src={purple} alt="shape" className={"purple " + props.theme} />
-      <img src={blue} alt="shape" className={"blue " + props.theme} />
-      <img src={red} alt="shape" className={"red " + props.theme} />
-      <img src={orange} alt="shape" className={"orange " + props.theme} />
+      <div className="spacer layer"></div>
     </div>
   );
 }

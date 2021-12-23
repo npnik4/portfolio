@@ -3,8 +3,7 @@ import React from "react";
 import "./Skills.scss";
 import Flip from "react-reveal/Flip";
 import Pulse from "react-reveal/Pulse";
-import deepRed from "../../assets/DeepRed2.svg";
-import barney from "../../assets/Barney2.svg";
+
 import {
   Title,
   TextHighlight,
@@ -116,9 +115,6 @@ function Skills(props) {
           </Link>
         </div>
       </Flip>
-
-      <img src={deepRed} alt="shape" className={"deepRed " + props.theme} />
-      <img src={barney} alt="shape" className={"barney " + props.theme} />
     </Container>
   );
 }

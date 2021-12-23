@@ -11,6 +11,7 @@
   .flex {
     display: flex !important;
     align-items: center;
+    padding-bottom: 5em;
   }
 
   .scroll {
@@ -25,9 +26,10 @@
   .scroll::before {
     animation: bounce 1s ease infinite;
     bottom: 2rem;
-    color: rgb(148, 148, 148);
+    color: rgb(34, 34, 34);
     content: "╲╱";
     font-size: 2rem;
+    font-weight: 800;
     height: 4rem;
     left: 50%;
     letter-spacing: -1px;
@@ -81,6 +83,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .spacer {
+    aspect-ratio: 960/450;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    position: absolute;
+    bottom: -60%;
+  }
+
+  .layer {
+    background-image: url("../../assets/heroWave.svg");
+    opacity: 0.9;
   }
 
   .purple {
@@ -234,6 +252,16 @@
     .text-container {
       width: 100%;
     }
+    .spacer {
+      aspect-ratio: 960/600;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+      position: absolute;
+      bottom: -15%;
+    }
   }
 
   @media screen and (max-width: 650px) {
@@ -250,6 +278,16 @@
     .image {
       display: none;
     }
+    .spacer {
+      aspect-ratio: 960/900;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+      position: absolute;
+      bottom: -15%;
+    }
   }
 
   @media screen and (max-width: 500px) {
@@ -261,6 +299,16 @@
         padding: 1em 1em;
         // width: 60%;
       }
+    }
+    .spacer {
+      aspect-ratio: 960/800;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+      position: absolute;
+      bottom: -20%;
     }
   }
 }

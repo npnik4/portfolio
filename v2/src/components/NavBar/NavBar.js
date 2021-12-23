@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
 import "./NavBar.scss";
-import logo from "../../assets/logo2.svg";
+import logo from "../../assets/logo.svg";
 import logoDark from "../../assets/logoDark.svg";
 import { Button } from "@material-ui/core";
 import res from "../../assets/docs/Nikhil_Resume.pdf";

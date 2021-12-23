@@ -23,7 +23,7 @@ function App() {
       },
       secondary: {
         light: "#fff",
-        main: "#4F05FF",
+        main: "#D53867",
         contrastText: "#fff",
       },
       success: {
@@ -42,7 +42,7 @@ function App() {
       },
       secondary: {
         light: "#fff",
-        main: "#5e97ff",
+        main: "#D53867",
         contrastText: "#e8e8e8",
       },
       success: {

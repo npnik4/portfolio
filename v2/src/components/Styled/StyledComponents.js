@@ -217,6 +217,7 @@ export const Card = styled.div`
   background: ${({ theme }) => theme.card};
   border-radius: 30px;
   min-height: 550px;
+  z-index: 0;
   @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
