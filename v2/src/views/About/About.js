@@ -33,7 +33,10 @@ function About(props) {
                   New Jersey Institute of Technology
                 </A3>
                 . Currently working at{" "}
-                <A3 target="_blank" href="https://www.adp.com/">
+                <A3
+                  target="_blank"
+                  href="https://am.jpmorgan.com/us/en/asset-management/adv/"
+                >
                   JPMorgan Chase
                 </A3>{" "}
                 as a Software Engineer.

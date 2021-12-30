@@ -81,7 +81,7 @@ function Projects(props) {
             css={light ? lightCardColor : darkCardColor}
             active={active[0]}
             link="https://npnik4.github.io/images/RiseScreens.svg"
-            textColor={light ? "#727272" : "#313131"}
+            textColor={light ? "#000" : "#fff"}
             tags={rise.tags}
           >
             <Carousel
@@ -104,7 +104,7 @@ function Projects(props) {
             css={light ? lightCardColor : darkCardColor}
             active={active[1]}
             link="https://devpost.com/software/funcooker"
-            textColor={light ? "#727272" : "#313131"}
+            textColor={light ? "#000" : "#fff"}
             tags={instaCook.tags}
           >
             <Carousel
@@ -121,7 +121,7 @@ function Projects(props) {
             css={light ? lightCardColor : darkCardColor}
             active={active[2]}
             link="https://npnik4.github.io/Animated-React-Webpage/"
-            textColor={light ? "#727272" : "#313131"}
+            textColor={light ? "#000" : "#fff"}
             tags={rlInc.tags}
           >
             <Parallax />
@@ -135,7 +135,7 @@ function Projects(props) {
             css={light ? lightCardColor : darkCardColor}
             active={active[3]}
             link="https://devpost.com/software/tell-me-the-drink"
-            textColor={light ? "#727272" : "#313131"}
+            textColor={light ? "#000" : "#fff"}
             tags={tellMeTheDrink.tags}
           >
             <Carousel
@@ -156,7 +156,7 @@ function Projects(props) {
             css={light ? lightCardColor : darkCardColor}
             active={active[4]}
             link="https://globalgamejam.org/2019/games/escape-orphanage"
-            textColor={light ? "#727272" : "#313131"}
+            textColor={light ? "#000" : "#fff"}
             tags={orphanage.tags}
           >
             <img src={escape} alt="ESCAPE THE ORPHANAGE" style={imageStyles} />
@@ -170,7 +170,7 @@ function Projects(props) {
             css={light ? lightCardColor : darkCardColor}
             active={active[5]}
             link="https://rl-inc.io/"
-            textColor={light ? "#727272" : "#313131"}
+            textColor={light ? "#000" : "#fff"}
             tags={rlInc.tags}
           >
             <img
